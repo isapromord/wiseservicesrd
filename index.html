@@ -288,16 +288,16 @@
 <!-- HERO SECTION: FULL-BLEED VIDEO CINEMATOGRÁFICO DE FONDO -->
 <section class="relative w-full min-h-[92vh] flex items-center overflow-hidden" id="hero">
   <!-- 1. FULL-BLEED VIDEO DE FONDO -->
-  <div class="absolute inset-0 w-full h-full overflow-hidden -z-20">
-    <video autoplay muted loop playsinline poster="assets/images/scenario-tower-pool-drone.jpg" class="w-full h-full object-cover object-center scale-105">
+  <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/scenario-tower-pool-drone.jpg" class="w-full h-full object-cover object-center scale-105">
       <source src="assets/videos/hero-drone-video.mp4" type="video/mp4">
       <source src="assets/videos/hero-drone-video-720p.mp4" type="video/mp4">
     </video>
   </div>
 
   <!-- 2. OVERLAY CINEMATOGRÁFICO DE DOBLE CAPA -->
-  <div class="absolute inset-0 bg-gradient-to-r from-[#001229]/95 via-[#001229]/80 to-transparent z-0"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-[#001229] via-transparent to-[#001229]/60 z-0"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-[#001229]/90 via-[#001229]/65 to-transparent z-[1] pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-[#001229] via-transparent to-[#001229]/40 z-[1] pointer-events-none"></div>
 
   <!-- 3. CONTENIDO PERSUASIVO SOBRE EL VIDEO (COLUMNA IZQUIERDA) -->
   <div class="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-margin py-16 sm:py-24">
@@ -1733,5 +1733,25 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
       }, 3500);
     });
   </script>
+
+
+<script id="video-autoplay-helper">
+  document.addEventListener('DOMContentLoaded', function() {
+    const v = document.getElementById('heroVideo');
+    if (v) {
+      v.muted = true;
+      v.play().catch(function(err) {
+        console.warn('Autoplay waiting for touch/click:', err);
+        const resumePlay = function() {
+          v.play();
+          window.removeEventListener('click', resumePlay);
+          window.removeEventListener('touchstart', resumePlay);
+        };
+        window.addEventListener('click', resumePlay, { once: true });
+        window.addEventListener('touchstart', resumePlay, { once: true });
+      });
+    }
+  });
+</script>
 
 </body></html>
