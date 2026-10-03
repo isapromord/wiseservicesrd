@@ -4,7 +4,7 @@
 <meta content="web_standard" name="shell-type">
 <title>Wise Services RD | Property Management &amp; Administración de Condominios en Santo Domingo</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
     @layer base {
       html, body { margin:0; padding:0; scroll-behavior: smooth; }
@@ -12,7 +12,7 @@
       main > :first-child { margin-top:0 !important; }
       main > :last-child { margin-bottom:0 !important; }
     }
-    ::-webkit-scrollbar { display:none; }
+    /* scrollbar updated */
     @keyframes progressAnim {
       from { width: 0%; }
       to { width: 100%; }
@@ -52,12 +52,7 @@
       animation: shimmerSweep 4s infinite;
       pointer-events: none;
     }
-    .reveal-init {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: opacity, transform;
-    }
+    .reveal-init { opacity: 1; transition: transform 0.4s ease; }
     .reveal-init.revealed {
       opacity: 1;
       transform: translateY(0);
@@ -82,6 +77,44 @@
     }
     .range-slider-thumb::-webkit-slider-thumb:hover {
       transform: scale(1.18);
+    }
+
+  
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined' !important;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+      vertical-align: middle;
+    }
+
+    /* MODERN CUSTOM SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* VISIBILITY GUARANTEE: NEVER HIDE CONTENT */
+    .reveal-init {
+      opacity: 1 !important;
+      transform: none !important;
     }
 
   </style>
@@ -227,9 +260,9 @@
 </div>
 <!-- MAIN NAVBAR -->
 <div class="h-20 max-w-[1280px] mx-auto px-4 sm:px-margin flex items-center justify-between">
-<a class="flex items-center gap-space-md group" href="#hero"><img alt="Wise Services RD" class="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" src="assets/images/logo-header.png"></a>
+<a class="flex items-center gap-2 group shrink-0 mr-4 lg:mr-8" href="#hero"><img alt="Wise Services RD" class="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" src="assets/images/logo-header.png"></a>
 <!-- Desktop Links -->
-<nav class="hidden xl:flex items-center gap-6">
+<nav class="hidden lg:flex items-center gap-4 xl:gap-6">
 <a class="font-label-lg text-label-lg text-primary font-bold hover:text-secondary transition-colors" href="#hero">Propietarios</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#realidad-rentar">Dolor vs. Paz Mental</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#como-funciona">Cómo Funciona</a>
@@ -1442,132 +1475,9 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 </section>
 </div>
 <!-- Scripts de interactividad -->
-<script>
-      let currentScenario = 0;
-      const totalScenarios = 3;
-      let scenarioTimer = null;
-
-      function updateScenarioUI(index) {
-        currentScenario = index;
-        for (let i = 1; i <= totalScenarios; i++) {
-          const panel = document.getElementById(`panel-scenario-${i}`);
-          const tab = document.getElementById(`tab-scenario-${i}`);
-          const progress = document.getElementById(`progress-scenario-${i}`);
-
-          if (i - 1 === index) {
-            if (panel) {
-              panel.classList.remove('opacity-0', 'pointer-events-none');
-              panel.classList.add('opacity-100');
-            }
-            if (tab) {
-              tab.classList.remove('opacity-75', 'bg-white/5');
-              tab.classList.add('bg-white/20', 'ring-1', 'ring-secondary');
-            }
-            if (progress) {
-              progress.classList.remove('scenario-progress-active');
-              void progress.offsetWidth; // trigger reflow
-              progress.classList.add('scenario-progress-active');
-              progress.style.width = '';
-            }
-          } else {
-            if (panel) {
-              panel.classList.remove('opacity-100');
-              panel.classList.add('opacity-0', 'pointer-events-none');
-            }
-            if (tab) {
-              tab.classList.add('opacity-75', 'bg-white/5');
-              tab.classList.remove('bg-white/20', 'ring-1', 'ring-secondary');
-            }
-            if (progress) {
-              progress.classList.remove('scenario-progress-active');
-              progress.style.width = '0%';
-            }
-          }
-        }
-      }
-
-      function startScenarioLoop() {
-        if (scenarioTimer) clearInterval(scenarioTimer);
-        scenarioTimer = setInterval(() => {
-          const next = (currentScenario + 1) % totalScenarios;
-          updateScenarioUI(next);
-        }, 5000);
-      }
-
-      function setScenario(index) {
-        updateScenarioUI(index);
-        startScenarioLoop();
-      }
-
-      function nextScenario() {
-        const next = (currentScenario + 1) % totalScenarios;
-        setScenario(next);
-      }
-
-      function prevScenario() {
-        const prev = (currentScenario - 1 + totalScenarios) % totalScenarios;
-        setScenario(prev);
-      }
-
-      // Initialize simulator loop
-      document.addEventListener('DOMContentLoaded', () => {
-        startScenarioLoop();
-      });
-
-      function switchMainServiceScope(scope) {
-        const propPanel = document.getElementById('panel-scope-propietario');
-        const edifPanel = document.getElementById('panel-scope-edificio');
-        const propBtn = document.getElementById('btn-scope-propietario');
-        const edifBtn = document.getElementById('btn-scope-edificio');
-
-        if (scope === 'propietario') {
-          if (propPanel) propPanel.classList.remove('hidden');
-          if (edifPanel) edifPanel.classList.add('hidden');
-          if (propBtn) propBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm';
-          if (edifBtn) edifBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary';
-        } else {
-          if (propPanel) propPanel.classList.add('hidden');
-          if (edifPanel) edifPanel.classList.remove('hidden');
-          if (propBtn) propBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary';
-          if (edifBtn) edifBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm';
-        }
-      }
-
-      function selectQuoteTab(tabName) {
-        const propForm = document.getElementById('form-propietario');
-        const edifForm = document.getElementById('form-edificio');
-        const propTabBtn = document.getElementById('quote-tab-propietario');
-        const edifTabBtn = document.getElementById('quote-tab-edificio');
-
-        if (tabName === 'propietario') {
-          if (propForm) propForm.classList.remove('hidden');
-          if (edifForm) edifForm.classList.add('hidden');
-          if (propTabBtn) propTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-sm';
-          if (edifTabBtn) edifTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container';
-        } else {
-          if (propForm) propForm.classList.add('hidden');
-          if (edifForm) edifForm.classList.remove('hidden');
-          if (propTabBtn) propTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container';
-          if (edifTabBtn) edifTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-sm';
-        }
-      }
-
-      function handleFormSubmit(type) {
-        const banner = document.getElementById('form-success-banner');
-        if (banner) {
-          banner.classList.remove('hidden');
-          const activeForm = type === 'propietario' ? document.getElementById('form-propietario') : document.getElementById('form-edificio');
-          if (activeForm) {
-            activeForm.reset();
-          }
-          setTimeout(() => {
-            banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 100);
-        }
-      }
-    </script>
 </main>
 <!-- BOTÓN FLOTANTE WHATSAPP -->
+<!-- BOTÓN FLOTANTE WHATSAPP DE ALTO IMPACTO -->
 <div class="fixed bottom-6 right-6 z-50 flex items-center">
 <a class="flex items-center gap-2 px-4 py-3 rounded-full bg-primary-container text-on-primary shadow-[0_12px_28px_rgba(15,39,68,0.35)] hover:bg-primary transition-all border border-secondary/40 group transform hover:scale-105" href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20me%20gustar%C3%ADa%20asesor%C3%ADa%20para%20administrar%20mi%20apartamento" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[24px] text-green-400">chat</span>
@@ -1683,14 +1593,274 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
     </button>
   </aside>
 
-  <!-- FLOATING WHATSAPP PILL CON PULSO RADAR ACTIVO -->
-  <a href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20quisiera%20asesor%C3%ADa%20para%20administrar%20mi%20propiedad%20en%20Santo%20Domingo" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-[#25D366] text-white font-bold text-xs sm:text-sm shadow-[0_8px_25px_rgba(37,211,102,0.4)] hover:shadow-[0_12px_30px_rgba(37,211,102,0.55)] hover:scale-105 transition-all group">
-    <span class="relative flex h-3 w-3">
-      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-      <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-    </span>
-    <span class="hidden sm:inline-block font-semibold">Asesor Inversionistas 24/7</span>
-    <span class="material-symbols-outlined text-[20px]">chat</span>
-  </a>
+  
+
+
+  <!-- SCRIPTS CENTRALIZADOS DE INTERACTIVIDAD & CALCULADORA -->
+  <script>
+    // 1. SIMULADOR DE ESCENARIOS (HERO)
+    let currentScenario = 0;
+    const totalScenarios = 3;
+    let scenarioTimer = null;
+
+    function updateScenarioUI(index) {
+      currentScenario = index;
+      for (let i = 1; i <= totalScenarios; i++) {
+        const panel = document.getElementById(`panel-scenario-${i}`);
+        const tab = document.getElementById(`tab-scenario-${i}`);
+        const progress = document.getElementById(`progress-scenario-${i}`);
+
+        if (i - 1 === index) {
+          if (panel) {
+            panel.classList.remove('opacity-0', 'pointer-events-none');
+            panel.classList.add('opacity-100');
+          }
+          if (tab) {
+            tab.classList.remove('opacity-75', 'bg-white/5');
+            tab.classList.add('bg-white/20', 'ring-1', 'ring-secondary');
+          }
+          if (progress) {
+            progress.classList.remove('scenario-progress-active');
+            void progress.offsetWidth; // trigger reflow
+            progress.classList.add('scenario-progress-active');
+            progress.style.width = '';
+          }
+        } else {
+          if (panel) {
+            panel.classList.remove('opacity-100');
+            panel.classList.add('opacity-0', 'pointer-events-none');
+          }
+          if (tab) {
+            tab.classList.add('opacity-75', 'bg-white/5');
+            tab.classList.remove('bg-white/20', 'ring-1', 'ring-secondary');
+          }
+          if (progress) {
+            progress.classList.remove('scenario-progress-active');
+            progress.style.width = '0%';
+          }
+        }
+      }
+    }
+
+    function startScenarioLoop() {
+      if (scenarioTimer) clearInterval(scenarioTimer);
+      scenarioTimer = setInterval(() => {
+        const next = (currentScenario + 1) % totalScenarios;
+        updateScenarioUI(next);
+      }, 5000);
+    }
+
+    function setScenario(index) {
+      updateScenarioUI(index);
+      startScenarioLoop();
+    }
+
+    function nextScenario() {
+      const next = (currentScenario + 1) % totalScenarios;
+      setScenario(next);
+    }
+
+    function prevScenario() {
+      const prev = (currentScenario - 1 + totalScenarios) % totalScenarios;
+      setScenario(prev);
+    }
+
+    // 2. CALCULADORA INTERACTIVA DE RENTA
+    const slider = document.getElementById('rent-range-slider');
+    const sliderValDisplay = document.getElementById('slider-val-display');
+    const sliderDopDisplay = document.getElementById('slider-dop-display');
+    const calcRentAnnual = document.getElementById('calc-rent-annual');
+    const calcFeeMonthly = document.getElementById('calc-fee-monthly');
+    const calcNetMonthly = document.getElementById('calc-net-monthly');
+    const calcHoursSaved = document.getElementById('calc-hours-saved');
+
+    function updateCalculator(val) {
+      const monthly = parseInt(val, 10);
+      const annual = monthly * 12;
+      const fee = Math.round(monthly * 0.10);
+      const net = monthly - fee;
+      const dop = Math.round(monthly * 60);
+
+      if (sliderValDisplay) sliderValDisplay.textContent = `US$ ${monthly.toLocaleString()}`;
+      if (sliderDopDisplay) sliderDopDisplay.textContent = `≈ RD$ ${dop.toLocaleString()} / mes`;
+      if (calcRentAnnual) calcRentAnnual.textContent = `US$ ${annual.toLocaleString()}`;
+      if (calcFeeMonthly) calcFeeMonthly.innerHTML = `US$ ${fee.toLocaleString()} <span class="text-xs font-normal text-white">/mes</span>`;
+      if (calcNetMonthly) calcNetMonthly.innerHTML = `US$ ${net.toLocaleString()} <span class="text-xs font-normal text-white">/mes</span>`;
+      if (calcHoursSaved) calcHoursSaved.textContent = `~${monthly >= 2000 ? 180 : 144} horas`;
+    }
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        updateCalculator(e.target.value);
+      });
+      // Inicializar con valor default
+      updateCalculator(slider.value);
+    }
+
+    function applyCalculatorValue() {
+      const val = slider ? parseInt(slider.value, 10) : 1500;
+      selectQuoteTab('propietario');
+      const canonSelect = document.getElementById('p-canon');
+      if (canonSelect) {
+        if (val <= 1000) {
+          canonSelect.value = 'rango-1';
+        } else if (val <= 1600) {
+          canonSelect.value = 'rango-2';
+        } else if (val <= 2500) {
+          canonSelect.value = 'rango-3';
+        } else {
+          canonSelect.value = 'rango-4';
+        }
+      }
+      const formProp = document.getElementById('form-propietario');
+      if (formProp) {
+        formProp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const nombreInput = document.getElementById('p-nombre');
+        if (nombreInput) nombreInput.focus();
+      }
+    }
+
+    // 3. TABS DE SERVICIOS Y COTIZADOR
+    function switchMainServiceScope(scope) {
+      const propPanel = document.getElementById('panel-scope-propietario');
+      const edifPanel = document.getElementById('panel-scope-edificio');
+      const propBtn = document.getElementById('btn-scope-propietario');
+      const edifBtn = document.getElementById('btn-scope-edificio');
+
+      if (scope === 'propietario') {
+        if (propPanel) propPanel.classList.remove('hidden');
+        if (edifPanel) edifPanel.classList.add('hidden');
+        if (propBtn) propBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm';
+        if (edifBtn) edifBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary';
+      } else {
+        if (propPanel) propPanel.classList.add('hidden');
+        if (edifPanel) edifPanel.classList.remove('hidden');
+        if (propBtn) propBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary';
+        if (edifBtn) edifBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm';
+      }
+    }
+
+    function selectQuoteTab(tabName) {
+      const propForm = document.getElementById('form-propietario');
+      const edifForm = document.getElementById('form-edificio');
+      const propTabBtn = document.getElementById('quote-tab-propietario');
+      const edifTabBtn = document.getElementById('quote-tab-edificio');
+
+      if (tabName === 'propietario') {
+        if (propForm) propForm.classList.remove('hidden');
+        if (edifForm) edifForm.classList.add('hidden');
+        if (propTabBtn) propTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-sm';
+        if (edifTabBtn) edifTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container';
+      } else {
+        if (propForm) propForm.classList.add('hidden');
+        if (edifForm) edifForm.classList.remove('hidden');
+        if (propTabBtn) propTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container';
+        if (edifTabBtn) edifTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-sm';
+      }
+    }
+
+    function handleFormSubmit(type) {
+      const banner = document.getElementById('form-success-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        const activeForm = type === 'propietario' ? document.getElementById('form-propietario') : document.getElementById('form-edificio');
+        if (activeForm) activeForm.reset();
+        setTimeout(() => {
+          banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+
+    // 4. ANIMACIÓN DE CONTADORES NUMÉRICOS
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter-number');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseFloat(el.getAttribute('data-target'));
+            const prefix = el.getAttribute('data-prefix') || '';
+            const suffix = el.getAttribute('data-suffix') || '';
+            const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+            const duration = 1800;
+            const startTime = performance.now();
+
+            function update(now) {
+              const elapsed = now - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              const val = (target * easeOut).toFixed(decimals);
+              el.textContent = `${prefix}${val}${suffix}`;
+              if (progress < 1) {
+                requestAnimationFrame(update);
+              } else {
+                el.textContent = `${prefix}${target}${suffix}`;
+              }
+            }
+            requestAnimationFrame(update);
+            obs.unobserve(el);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      counters.forEach(c => observer.observe(c));
+    }
+
+    // 5. TOAST DE PRUEBA SOCIAL EN VIVO
+    const socialEvents = [
+      { icon: 'apartment', msg: 'Torre en Piantini acaba de sumarse a administración Wise Services.', time: 'Hace 8 min' },
+      { icon: 'payments', msg: 'Dispersión de renta de US$ 1,650 acreditada a propietario en Miami, FL.', time: 'Hace 24 min' },
+      { icon: 'build', msg: 'Avería de climatización resuelta en Naco con reporte fotográfico digital.', time: 'Hace 45 min' },
+      { icon: 'verified', msg: 'Nuevo contrato formal de 12 meses firmado con inquilino con depuración A+.', time: 'Hace 1 hora' },
+      { icon: 'gavel', msg: 'Asesoría y representación en asamblea completada para Torre Bella Vista.', time: 'Hace 2 horas' }
+    ];
+    let socialIdx = 0;
+    let toastDismissed = false;
+
+    function showNextSocialToast() {
+      if (toastDismissed) return;
+      const toast = document.getElementById('social-proof-toast');
+      const iconEl = document.getElementById('toast-icon');
+      const msgEl = document.getElementById('toast-msg');
+      const timeEl = document.getElementById('toast-time');
+      if (!toast || !msgEl) return;
+
+      const current = socialEvents[socialIdx];
+      if (iconEl) iconEl.textContent = current.icon;
+      msgEl.textContent = current.msg;
+      if (timeEl) timeEl.textContent = current.time;
+
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        if (!toastDismissed) {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-32', 'opacity-0');
+        }
+      }, 5500);
+
+      socialIdx = (socialIdx + 1) % socialEvents.length;
+    }
+
+    function dismissToast() {
+      toastDismissed = true;
+      const toast = document.getElementById('social-proof-toast');
+      if (toast) {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-32', 'opacity-0');
+      }
+    }
+
+    // INICIALIZACIÓN GLOBAL
+    document.addEventListener('DOMContentLoaded', () => {
+      startScenarioLoop();
+      initCounters();
+      setTimeout(() => {
+        showNextSocialToast();
+        setInterval(showNextSocialToast, 14000);
+      }, 3500);
+    });
+  </script>
 
 </body></html>
