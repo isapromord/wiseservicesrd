@@ -1,0 +1,1481 @@
+﻿<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Wise Services RD | Property Management &amp; Administración de Condominios en Santo Domingo</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin:0; padding:0; scroll-behavior: smooth; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top:0 !important; }
+      main > :last-child { margin-bottom:0 !important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+    @keyframes progressAnim {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    .scenario-progress-active {
+      animation: progressAnim 5000ms linear forwards;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "surface-dim": "#d2d9f4",
+            "tertiary-container": "#392100",
+            "inverse-primary": "#b2c8ed",
+            "surface-bright": "#faf8ff",
+            "primary-fixed": "#d4e3ff",
+            "on-primary-fixed": "#021c39",
+            "surface-variant": "#dae2fd",
+            "primary-fixed-dim": "#b2c8ed",
+            "surface": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "primary": "#001229",
+            "on-secondary-fixed": "#370e00",
+            "inverse-surface": "#283044",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#653e00",
+            "surface-container-highest": "#dae2fd",
+            "secondary-fixed": "#ffdbce",
+            "on-secondary-container": "#571a00",
+            "surface-container-high": "#e2e7ff",
+            "outline": "#74777e",
+            "secondary": "#a73a00",
+            "on-surface-variant": "#44474d",
+            "tertiary-fixed": "#ffddb8",
+            "inverse-on-surface": "#eef0ff",
+            "on-surface": "#131b2e",
+            "surface-container-low": "#f2f3ff",
+            "on-tertiary-container": "#c57e00",
+            "on-background": "#131b2e",
+            "secondary-fixed-dim": "#ffb599",
+            "tertiary": "#1d0e00",
+            "on-primary-container": "#798fb1",
+            "on-secondary-fixed-variant": "#7f2b00",
+            "primary-container": "#0f2744",
+            "surface-tint": "#4a5f7f",
+            "secondary-container": "#fd651e",
+            "on-tertiary-fixed": "#2a1700",
+            "on-primary-fixed-variant": "#324866",
+            "outline-variant": "#c4c6ce",
+            "surface-container": "#eaedff",
+            "background": "#faf8ff",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-2xl": "4rem",
+            margin: "2.5rem",
+            gutter: "1.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "display-hero-mobile": ["34px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "700" }],
+            "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<link rel="icon" type="image/png" href="https://i.postimg.cc/FRfVXCZJ/WISE-Bolas-pdf-(1080-x-1080-px).png"></head>
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+<!-- TOPBAR PERSUASIVO & SELECTOR DE CONTACTO -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl shadow-[0_2px_12px_rgba(15,39,68,0.08)]">
+<div class="bg-primary-container text-on-primary font-label-caps text-label-caps border-b border-white/5">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex items-center justify-between h-10">
+<!-- Teléfonos Directos & Diáspora -->
+<div class="flex items-center gap-space-md sm:gap-space-lg text-[11px] sm:text-xs">
+<span class="flex items-center gap-1.5 text-secondary-fixed font-semibold">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+            RD &amp; Diáspora (EE.UU., España, Europa)
+          </span>
+<div class="hidden md:flex items-center gap-4">
+<a class="flex items-center gap-1 hover:text-secondary-fixed transition-colors" href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20para%20administrar%20mi%20apartamento%20en%20RD" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[14px] text-green-400">chat</span>
+              WhatsApp RD/EE.UU: +1 (829) 455-4783
+            </a>
+<span class="text-white/30">|</span>
+<a class="flex items-center gap-1 hover:text-secondary-fixed transition-colors" href="tel:8494453131">
+<span class="material-symbols-outlined text-[14px]">call</span>
+              Oficina: (849) 445-3131
+            </a>
+</div>
+</div>
+<!-- Selector rápido WhatsApp y Garantía -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-1 text-[11px] sm:text-xs text-secondary-fixed hover:text-white transition-colors" href="https://wa.me/18294554783" target="_blank">
+<span class="material-symbols-outlined text-[14px]">support_agent</span>
+<span class="font-bold">Chat Inversionistas 24/7</span>
+</a>
+</div>
+</div>
+</div>
+<!-- MAIN NAVBAR -->
+<div class="h-20 max-w-[1280px] mx-auto px-4 sm:px-margin flex items-center justify-between">
+<a class="flex items-center gap-space-md group" href="#hero"><img alt="Wise Services RD" class="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" src="assets/images/logo-header.png"></a>
+<!-- Desktop Links -->
+<nav class="hidden xl:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-primary font-bold hover:text-secondary transition-colors" href="#hero">Propietarios</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#realidad-rentar">Dolor vs. Paz Mental</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#como-funciona">Cómo Funciona</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#pacto-rendimiento">Pacto Rendimiento</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#testimonios">Testimonios</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#servicios-catalogo">Torres &amp; Condos</a>
+</nav>
+<!-- Right CTAs -->
+<div class="flex items-center gap-space-sm sm:gap-space-md">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md border border-outline-variant/40 hover:bg-surface-container-high transition-all" href="#portal-inquilinos">
+<span class="material-symbols-outlined text-[17px] text-secondary">lock</span>
+<span class="">Portal Clientes</span>
+</a>
+<a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-[0_4px_14px_rgba(167,58,0,0.28)] hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span class="">Calcular mi Cuota / Cotizar</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-[120px] bg-surface min-h-[calc(100vh-120px)]">
+<div class="flex flex-col w-full">
+<!-- HERO SECTION: PERSUASIÓN PSICOLÓGICA Y DOLORES REALES -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface-container-lowest to-surface pb-space-2xl" id="hero">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin pt-space-lg sm:pt-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Columna de Texto Persuasivo -->
+<div class="lg:col-span-6 flex flex-col gap-space-md sm:gap-space-lg">
+<!-- Badge de Promesa Central -->
+<div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/25 text-secondary">
+<span class="material-symbols-outlined text-[17px]">shield_with_heart</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-bold">Renta Sin Estrés en Santo Domingo</span>
+</div>
+<!-- Titular Emocional de Alto Impacto -->
+<div class="flex flex-col gap-3">
+<h1 class="font-display-hero text-3xl sm:text-4xl lg:text-display-hero text-primary tracking-tight font-extrabold leading-[1.12]">
+                  Deja de lidiar con inquilinos, cobros atrasados y averías a deshoras.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed pt-1">
+<strong class="text-primary font-semibold">Administramos tu apartamento en Santo Domingo</strong> para que solo veas tu renta depositada puntualmente cada mes, vivas en República Dominicana o a miles de kilómetros de distancia (Nueva York, Florida, España, Europa).
+                </p>
+</div>
+<!-- CTAs Principales con Reducción de Fricción -->
+<div class="flex flex-wrap items-center gap-space-md pt-1">
+<a class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-4 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-xl hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5 font-bold" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+<span class="material-symbols-outlined text-[20px]">request_quote</span>
+<span class="">Cotizar Administración de mi Apartamento</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg border border-primary/20 hover:bg-surface-container transition-all shadow-sm font-semibold" href="https://wa.me/18294554783?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20para%20mi%20apartamento%20en%20Santo%20Domingo" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-green-600">chat</span>
+<span class="">Hablar directo por WhatsApp</span>
+</a>
+</div>
+<!-- 4 Badges de Confianza Fiduciaria -->
+<div class="pt-space-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Garantía Cero Riesgo</span>
+<span class="text-[12px] text-on-surface-variant leading-tight">Si no cobras, no cobramos</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">payments</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Dispersión ACH / Wire</span>
+<span class="text-[12px] text-on-surface-variant leading-tight">En tu banco RD o EE.UU.</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">home_repair_service</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Técnicos Propios 24/7</span>
+<span class="text-[12px] text-on-surface-variant leading-tight">Precios pactados y fotos</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Defensa Condominal</span>
+<span class="text-[12px] text-on-surface-variant leading-tight">Voz legal en asambleas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Columna Visual: DYNAMIC MULTI-SCENARIO SIMULATOR PLAYER -->
+<div class="lg:col-span-6 relative flex flex-col items-center">
+<div class="w-full relative rounded-3xl bg-primary-container p-3 sm:p-4 shadow-2xl border border-white/20 overflow-hidden text-on-primary">
+<!-- Top Bar del Simulador -->
+<div class="flex items-center justify-between px-3 py-2 border-b border-white/10 mb-3">
+<div class="flex items-center gap-2">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+</span>
+<span class="font-label-caps text-[11px] tracking-widest uppercase font-bold text-red-300">EN VIVO: Simulación de Gestión Activa</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-surface-container-high bg-white/10 px-2.5 py-1 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">pin_drop</span>
+<span class="font-medium text-[11px]">Polígono Central SD</span>
+</div>
+</div>
+<!-- Tabs de Selección de Escenario con Timeline Indicators -->
+<div class="grid grid-cols-3 gap-1.5 sm:gap-2 mb-3">
+<!-- Tab 1 -->
+<button class="scenario-tab text-left p-2 sm:p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden opacity-75 bg-white/5" id="tab-scenario-1" onclick="setScenario(0)">
+<div class="flex items-center gap-1 sm:gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">apartment</span>
+<span class="font-label-caps text-[10px] sm:text-xs font-bold leading-tight truncate">1. Renta Lista</span>
+</div>
+<p class="hidden sm:block text-[10px] text-surface-variant truncate mt-0.5">Depuración &amp; Setup</p>
+<!-- Progress bar line -->
+<div class="w-full bg-white/20 h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="h-full bg-secondary transition-all" id="progress-scenario-1" style="width: 0%;"></div>
+</div>
+</button>
+<!-- Tab 2 -->
+<button class="scenario-tab text-left p-2 sm:p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden hover:bg-white/10 opacity-75 bg-white/5" id="tab-scenario-2" onclick="setScenario(1)">
+<div class="flex items-center gap-1 sm:gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">build_circle</span>
+<span class="font-label-caps text-[10px] sm:text-xs font-bold leading-tight truncate">2. Averías 24/7</span>
+</div>
+<p class="hidden sm:block text-[10px] text-surface-variant truncate mt-0.5">Técnicos &amp; Fotos</p>
+<div class="w-full bg-white/20 h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="h-full bg-secondary transition-all w-0" id="progress-scenario-2" style="width: 0%;"></div>
+</div>
+</button>
+<!-- Tab 3 -->
+<button class="scenario-tab text-left p-2 sm:p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden hover:bg-white/10 bg-white/20 ring-1 ring-secondary" id="tab-scenario-3" onclick="setScenario(2)">
+<div class="flex items-center gap-1 sm:gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">savings</span>
+<span class="font-label-caps text-[10px] sm:text-xs font-bold leading-tight truncate">3. Cobro Puntual</span>
+</div>
+<p class="hidden sm:block text-[10px] text-surface-variant truncate mt-0.5">Dispersión ACH</p>
+<div class="w-full bg-white/20 h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="h-full bg-secondary transition-all w-0 scenario-progress-active" id="progress-scenario-3"></div>
+</div>
+</button>
+</div>
+<!-- Main Screen Showcase Player Container -->
+<div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/20 group">
+<!-- Scenario 1 Display -->
+<div class="scenario-panel absolute inset-0 transition-opacity duration-700 z-10 opacity-0 pointer-events-none" id="panel-scenario-1">
+<img alt="Apartamento amueblado de lujo listo para inquilinos calificados en Piantini / Naco" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/images/piantini-luxury.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-black/30"></div>
+<!-- Top badge -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-white/20 text-xs font-bold text-secondary-fixed shadow-lg">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="">✨ Unidad Lista para Renta | Depuración 100% Completa</span>
+</span>
+<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-green-500/90 text-white font-bold text-[11px] shadow">
+Inquilino A+
+</span>
+</div>
+<!-- Bottom stats overlay -->
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-base sm:text-lg font-bold text-white leading-tight">Escenario 1: Alquiler Rápido &amp; Impecable</h4>
+<p class="text-xs text-surface-variant">Piantini &amp; Naco • Contratos formales de 12 meses con fiador solidario</p>
+</div>
+<div class="text-right hidden sm:block">
+<span class="text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">Canon Promedio</span>
+<p class="font-headline-sm text-sm font-bold text-white">US$ 1,200 – $2,500/mes</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Scenario 2 Display -->
+<div class="scenario-panel absolute inset-0 transition-opacity duration-700 z-10 opacity-0 pointer-events-none" id="panel-scenario-2">
+<img alt="Técnico propio inspeccionando luminarias y climatización con reporte fotográfico digital" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/images/maintenance-technician.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-black/30"></div>
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-white/20 text-xs font-bold text-secondary-fixed shadow-lg">
+<span class="material-symbols-outlined text-[16px]">construction</span>
+<span class="">🔧 Inspección &amp; Mantenimiento Preventivo 24/7 | Reporte Fotográfico Enviado</span>
+</span>
+<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-amber-500/90 text-white font-bold text-[11px] shadow">
+Atención en &lt; 2 hrs
+</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-base sm:text-lg font-bold text-white leading-tight">Escenario 2: Mantenimiento &amp; Averías Resueltas</h4>
+<p class="text-xs text-surface-variant">Técnicos certificados • Cero llamadas a medianoche para el propietario</p>
+</div>
+<div class="text-right hidden sm:block">
+<span class="text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">Bitácora Digital</span>
+<p class="font-headline-sm text-sm font-bold text-white">Fotos Antes / Después</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Scenario 3 Display -->
+<div class="scenario-panel absolute inset-0 transition-opacity duration-700 z-10 opacity-100" id="panel-scenario-3">
+<img alt="Notificación en smartphone de depósito de renta puntual recibido vía ACH/Wire" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/images/deposit-notification.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-black/30"></div>
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-white/20 text-xs font-bold text-secondary-fixed shadow-lg">
+<span class="material-symbols-outlined text-[16px]">paid</span>
+<span class="">💵 Renta Depositada Puntual | Cero Estrés ni Retrasos</span>
+</span>
+<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-green-500/90 text-white font-bold text-[11px] shadow">
+Dispersión Directa
+</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-base sm:text-lg font-bold text-white leading-tight">Escenario 3: Cobro Puntual &amp; Dispersión</h4>
+<p class="text-xs text-surface-variant">Transferencias ACH Santo Domingo o Wire internacional directo a tu cuenta</p>
+</div>
+<div class="text-right hidden sm:block">
+<span class="text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">Cobranza Efectiva</span>
+<p class="font-headline-sm text-sm font-bold text-white">99.4% Puntualidad</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Navigation Controls overlay -->
+<div class="absolute top-1/2 -translate-y-1/2 left-3 right-3 flex items-center justify-between pointer-events-none z-20">
+<button aria-label="Escenario anterior" class="pointer-events-auto w-9 h-9 rounded-full bg-primary/70 hover:bg-primary text-white backdrop-blur-md flex items-center justify-center border border-white/20 transition-all hover:scale-110" onclick="prevScenario()">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Siguiente escenario" class="pointer-events-auto w-9 h-9 rounded-full bg-primary/70 hover:bg-primary text-white backdrop-blur-md flex items-center justify-center border border-white/20 transition-all hover:scale-110" onclick="nextScenario()">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Floating Glassmorphic Stat Badges Below Player -->
+<div class="grid grid-cols-3 gap-2 mt-3">
+<div class="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col text-center">
+<span class="font-headline-sm text-xs sm:text-sm font-bold text-secondary-fixed">+38% Retención</span>
+<span class="text-[10px] text-surface-variant leading-tight">Inquilinos de largo plazo</span>
+</div>
+<div class="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col text-center">
+<span class="font-headline-sm text-xs sm:text-sm font-bold text-white">0 Llamadas</span>
+<span class="text-[10px] text-surface-variant leading-tight">A medianoche o fines de semana</span>
+</div>
+<div class="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col text-center">
+<span class="font-headline-sm text-xs sm:text-sm font-bold text-secondary-fixed">Reporte HD</span>
+<span class="text-[10px] text-surface-variant leading-tight">Fotográfico en tiempo real</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NUEVA SECCIÓN DE DOLOR VS. PAZ MENTAL ("La Realidad de Rentar en Santo Domingo") -->
+<section class="w-full py-space-2xl bg-surface-container-low" id="realidad-rentar">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
+<div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
+              La Realidad Inmobiliaria en RD
+            </span>
+<h2 class="font-headline-xl text-2xl sm:text-headline-xl text-primary font-bold">
+              ¿Cuánto te está costando realmente administrar por tu cuenta?
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Comprar un apartamento para renta debe ser una fuente de libertad, no un segundo trabajo desgastante cargado de emergencias y fricciones.
+            </p>
+</div>
+<!-- COMPARATIVA LADO A LADO -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-stretch">
+<!-- Lado Rojo: Gestionar por cuenta propia / corredor informal -->
+<div class="rounded-2xl bg-surface-container-lowest border-2 border-red-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-2 bg-red-400"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-4 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]">cancel</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg sm:text-headline-md font-bold text-gray-800">Gestionar por tu cuenta o con corredor informal</h3>
+<p class="text-xs text-red-600 font-semibold uppercase tracking-wider">Alto Estrés &amp; Pérdida de Dinero</p>
+</div>
+</div>
+</div>
+<ul class="flex flex-col gap-4 text-body-sm text-gray-700">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">warning</span>
+<span class=""><strong>Cobros atrasados y excusas interminables:</strong> Inseguridad constante para pagar la hipoteca o contar con tus dividendos el día previsto.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">phone_callback</span>
+<span class=""><strong>Llamadas urgentes a deshoras:</strong> Inquilinos llamándote de madrugada o fines de semana por una gotera o el compresor del aire.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">money_off</span>
+<span class=""><strong>Cotizaciones infladas de técnicos:</strong> Plomeros o electricistas ocasionales que cobran tarifas abusivas y dejan trabajos a medias.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">domain_disabled</span>
+<span class=""><strong>Conflictos y multas de la torre:</strong> Retrasos en el pago del mantenimiento común, quejas de la junta y recargos moratorios.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">flight_takeoff</span>
+<span class=""><strong>Viajes forzados a Santo Domingo:</strong> Tener que tomar un avión de emergencia desde el exterior para resolver litigios o desalojos.</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 italic">
+<span class="">Resultado: Agotamiento, desgaste del apartamento y rentabilidad menguante.</span>
+</div>
+</div>
+<!-- Lado Azul/Verde: Con Wise Services Property Management -->
+<div class="rounded-2xl bg-surface-container-lowest border-2 border-secondary/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden bg-gradient-to-b from-white to-surface-container-lowest">
+<div class="absolute top-0 left-0 right-0 h-2 bg-secondary"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-4 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold shadow-md">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg sm:text-headline-md font-bold text-primary">Con Wise Services Property Management</h3>
+<p class="text-xs text-secondary font-bold uppercase tracking-wider">100% Manos Libres &amp; Tranquilidad Absoluta</p>
+</div>
+</div>
+<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold bg-green-100 text-green-800">Cero Estrés</span>
+</div>
+<ul class="flex flex-col gap-4 text-body-sm text-on-surface">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class=""><strong class="text-primary">Cobro estricto y depósito directo:</strong> Recaudamos puntualmente y dispersamos a tu cuenta bancaria local o en EE.UU. con comprobante formal.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class=""><strong class="text-primary">Filtro blindado total:</strong> Tú jamás vuelves a recibir una queja de inquilinos. Wise Services atiende cualquier requerimiento 24/7.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class=""><strong class="text-primary">Red propia con tarifas corporativas:</strong> Técnicos depurados que solucionan problemas de plomería, AC o electricidad con reportes fotográficos de antes y después.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class=""><strong class="text-primary">Cuota condominal siempre al día:</strong> Pagamos el mantenimiento de la torre y representamos fiduciariamente tus intereses con voz en asambleas.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class=""><strong class="text-primary">Supervisión total desde tu móvil:</strong> Estados de cuenta mensuales y auditorías claras sin necesidad de subirte a un avión ni descuidar tu empleo.</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-caps text-xs text-primary font-bold">Resultado: Ingresos predecibles, inmueble protegido y paz mental garantizada.</span>
+<a class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline" href="#cotizacion-gratis">
+                  Cotizar mi plan <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CÓMO FUNCIONA EN 3 PASOS SIMPLES (Claridad Absoluta) -->
+<section class="w-full py-space-2xl bg-surface" id="como-funciona">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-secondary-fixed font-label-caps text-label-caps uppercase tracking-wider font-bold">
+              Proceso Transparente
+            </span>
+<h2 class="font-headline-xl text-2xl sm:text-headline-xl text-primary font-bold">
+              Tu Apartamento en Renta en 3 Simples Pasos
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Sin trámites burocráticos. Nosotros nos encargamos de la operación técnica, legal y financiera.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative hover:shadow-xl transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-primary text-secondary-fixed flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                01
+              </div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Entrega y Auditoría Inicial</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Realizamos una inspección fotográfica 360° de la unidad, validamos el inventario, calculamos el canon óptimo de mercado y filtramos con rigor crediticio y legal al inquilino ideal.
+                </p>
+</div>
+<ul class="text-xs text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-gray-600">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Validación en buró de crédito RD</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Contrato formalizado con fiador solidario</li>
+</ul>
+</div>
+<!-- Step 2 -->
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative hover:shadow-xl transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-secondary text-white flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                02
+              </div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Cobro &amp; Dispersión Automática</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Recaudamos la renta cada mes con rigurosidad fiduciaria. Descontamos las cuotas de torre acordadas y transferimos tus fondos netos directamente a tu banco nacional o internacional.
+                </p>
+</div>
+<ul class="text-xs text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-gray-600">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Transferencias directas ACH / Wire bancario</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Estado de cuenta digital cada mes</li>
+</ul>
+</div>
+<!-- Step 3 -->
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative hover:shadow-xl transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-primary text-secondary-fixed flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                03
+              </div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Cuidado Integral 360°</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Supervisamos el buen estado físico del inmueble. Resolvemos cualquier avería con nuestra red técnica homologada y te representamos formalmente ante la administración del condominio.
+                </p>
+</div>
+<ul class="text-xs text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-gray-600">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Inspecciones con reportes fotográficos HD</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Asistencia y voto en asambleas de la torre</li>
+</ul>
+</div>
+</div>
+<div class="flex justify-center pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md hover:bg-secondary-container transition-all" href="#cotizacion-gratis">
+<span class="">Empezar con mi apartamento hoy</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- MODELO DE HONORARIOS TRANSPARENTE & "PACTO DE RENDIMIENTO" -->
+<section class="w-full py-space-2xl bg-surface-container-low" id="pacto-rendimiento">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
+<div class="rounded-3xl bg-primary text-on-primary p-6 sm:p-12 shadow-2xl relative overflow-hidden">
+<!-- Decoración de fondo -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-secondary-fixed text-primary font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+                  Honorarios Transparentes
+                </div>
+<h2 class="font-headline-xl text-2xl sm:text-headline-xl font-bold text-on-primary">
+                  El "Pacto de Rendimiento Wise"
+                </h2>
+<p class="font-body-md text-surface-container-high leading-relaxed">
+                  Alineamos nuestros incentivos con los tuyos: si tú no cobras tu renta, nosotros no devengamos honorarios. Sin letras pequeñas, sin sobrecargos en reparaciones ni cobros ocultos por mantenimiento de cuenta.
+                </p>
+<!-- 3 Pilares del Pacto -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+<div class="p-4 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">price_check</span>
+<span class="font-headline-sm text-sm font-bold text-white">Tarifa Transparente</span>
+<p class="text-xs text-surface-container-high">Porcentaje fijo mensual deduciendo únicamente sobre renta efectivamente recaudada.</p>
+</div>
+<div class="p-4 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">block</span>
+<span class="font-headline-sm text-sm font-bold text-white">Cero Cuota si Vacante</span>
+<p class="text-xs text-surface-container-high">No cobramos cuotas mensuales de administración si la propiedad está vacía.</p>
+</div>
+<div class="p-4 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">receipt</span>
+<span class="font-headline-sm text-sm font-bold text-white">Cuentas Claras</span>
+<p class="text-xs text-surface-container-high">Facturas originales de cada servicio o repuesto con autorización previa del dueño.</p>
+</div>
+</div>
+</div>
+<!-- Recuadro Comparativo Tarifa -->
+<div class="lg:col-span-5 bg-surface-container-lowest text-primary p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col gap-space-md border border-white/20">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div>
+<span class="font-label-caps text-xs text-secondary uppercase font-bold tracking-wider">Plan Integral para Propietarios</span>
+<h3 class="font-headline-md text-xl font-extrabold text-primary">Wise Care Inversionista</h3>
+</div>
+<span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">check</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl sm:text-4xl font-extrabold text-primary">10%</span>
+<span class="text-xs text-on-surface-variant font-medium">del canon de renta mensual</span>
+</div>
+<p class="text-xs text-on-surface-variant -mt-2">Sin costos de registro mensual ni tarifas de apertura de cuenta.</p>
+<ul class="flex flex-col gap-2.5 text-xs text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Cobro de alquiler y depósito a cuenta bancaria</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Gestión de pagos de mantenimiento y CAASD</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Línea directa para emergencias de inquilinos 24/7</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Inspecciones periódicas con fotos de control</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Representación fiduciaria en asambleas</li>
+</ul>
+<a class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:bg-secondary-container transition-all" href="#cotizacion-gratis">
+<span class="">Solicitar Auditoría de mi Inmueble</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIOS REALES Y PRUEBA SOCIAL (Diáspora e Inversionistas Locales) -->
+<section class="w-full py-space-2xl bg-surface" id="testimonios">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
+              Prueba Social Comprobada
+            </span>
+<h2 class="font-headline-xl text-2xl sm:text-headline-xl text-primary font-bold">
+              Lo que dicen los propietarios que confiaron en Wise
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Inversionistas dominicanos y extranjeros que transformaron sus alquileres en verdaderos ingresos pasivos.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Testimonio 1 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col justify-between gap-space-md hover:shadow-xl transition-all">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="text-body-sm text-on-surface leading-relaxed italic">
+                  "Tener 2 apartamentos a 2,500 millas de distancia solía ser un dolor de cabeza mensual. Con Wise recibo mi depósito puntual y las fotos de cada inspección sin tener que pedir favores a familiares."
+                </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-bold text-sm">
+                  RM
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-primary">Roberto Morales</span>
+<span class="text-xs text-on-surface-variant">Queens, NY • Inversionista Torre en Piantini</span>
+</div>
+</div>
+</div>
+<!-- Testimonio 2 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col justify-between gap-space-md hover:shadow-xl transition-all">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="text-body-sm text-on-surface leading-relaxed italic">
+                  "La diferencia frente a un corredor independiente es abismal. Wise es una empresa formal que sabe de leyes de condominio, supervisa a los técnicos y cuida mi propiedad como si fuera propia."
+                </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-bold text-sm">
+                  CP
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-primary">Lic. Carmen Peña</span>
+<span class="text-xs text-on-surface-variant">Santo Domingo • Propietaria en Bella Vista</span>
+</div>
+</div>
+</div>
+<!-- Testimonio 3 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col justify-between gap-space-md hover:shadow-xl transition-all">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="text-body-sm text-on-surface leading-relaxed italic">
+                  "Nunca más tuve que discutir por cuotas de mantenimiento atrasadas ni lidiar con reparaciones infladas. Su atención vía WhatsApp y reportes al centavo me dan total tranquilidad."
+                </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-bold text-sm">
+                  DS
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-primary">David Santana</span>
+<span class="text-xs text-on-surface-variant">Miami, FL • Propietario en Evaristo Morales</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN DUAL DE SERVICIOS (CATÁLOGO PROPIETARIOS / EDIFICIOS) -->
+<section class="w-full py-space-2xl bg-surface-container-low" id="servicios-catalogo">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">
+                Portafolio Completo
+              </span>
+<h2 class="font-headline-xl text-2xl sm:text-headline-xl text-primary font-bold">
+                Soluciones Especializadas Wise RD
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Tanto para el inversionista individual con uno o varios apartamentos, como para condominios residenciales y torres completas.
+              </p>
+</div>
+<!-- Selector Tabs Dual -->
+<div class="flex bg-surface-container-highest p-1 rounded-xl">
+<button class="px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm" id="btn-scope-propietario" onclick="switchMainServiceScope('propietario')">
+                Unidades Individuales
+              </button>
+<button class="px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary" id="btn-scope-edificio" onclick="switchMainServiceScope('edificio')">
+                Torres &amp; Condominios
+              </button>
+</div>
+</div>
+<!-- Scope A: PROPIETARIOS DE UNIDADES INDIVIDUALES -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md" id="panel-scope-propietario">
+<!-- Card 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-secondary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">calendar_month</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Renta de Larga Duración</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Especialistas en inquilinos a largo plazo (contratos de 1 año o más). Estabilidad de flujo, menor desgaste del inmueble y cero rotación constante.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Contratos formalizados con fiador</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Inventario fotográfico de entrega</li>
+</ul>
+</div>
+<!-- Card 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-secondary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">manage_search</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Depuración Rigurosa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Evaluación minuciosa de prospectos: historial crediticio en buró dominicano, referencias laborales y capacidad demostrable de pago.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Validación de solvencia comprobada</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Minimización de riesgo de mora</li>
+</ul>
+</div>
+<!-- Card 3 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-secondary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">currency_exchange</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Gestión de Cobros &amp; Dispersión</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Avisos puntuales de cobro, recaudo y deducción de compromisos autorizados para transferir tu ganancia puntual cada mes.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Cuentas bancarias en RD o el exterior</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Estado de cuenta mensual transparente</li>
+</ul>
+</div>
+<!-- Card 4 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-secondary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">handyman</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Mantenimiento con Fotos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Equipo técnico en plomería, pintura, aires acondicionados y cerrajería. Resolvemos con aprobación previa y fotos de entrega.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Soporte técnico de urgencia</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Preservación de plusvalía</li>
+</ul>
+</div>
+</div>
+<!-- Scope B: TORRES Y CONDOMINIOS (EDIFICIOS COMPLETOS) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md" id="panel-scope-edificio">
+<!-- Card B1 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-primary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">corporate_fare</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Administración Operativa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Supervisión in situ del personal de conserjería, seguridad y limpieza. Flota exclusiva y comunicación permanente con la junta directiva.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Supervisores de zona asignados</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Control laboral y uniformidad</li>
+</ul>
+</div>
+<!-- Card B2 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-primary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Finanzas Transparentes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Cobro digital del mantenimiento, conciliaciones bancarias en cuenta del condominio y emisión de balances auditables por todos los condóminos.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Gestión activa de cartera en mora</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Presupuesto anual y fondo de reserva</li>
+</ul>
+</div>
+<!-- Card B3 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-primary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Equipos Comunes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Planes calendarizados para plantas eléctricas, bombas de agua, portones vehiculares, paneles solares, piscinas y cisternas.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Bitácoras técnicas preventivas</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Proveedores homologados</li>
+</ul>
+</div>
+<!-- Card B4 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm border-t-4 border-primary hover:shadow-xl transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">gavel</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Asesoría Legal Ley 5038</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Formalización ante la DGII (RNC), regularización TSS de empleados, moderación de asambleas ordinarias y actas legalizadas.
+              </p>
+<ul class="text-body-sm text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-xs">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Notarización y actas válidas</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Cumplimiento laboral estricto</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FORMULARIO DE CAPTACIÓN ÁGIL (OPTIMIZADO PARA CONVERSIÓN DE PROPIETARIOS Y EDIFICIOS) -->
+<section class="w-full py-space-2xl bg-surface-container-low" id="cotizacion-gratis">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Columna Lateral Fiduciaria & Confianza -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-1.5 self-start px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/25 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">request_quote</span>
+<span class="">Cotización Inmediata &amp; Asesoría</span>
+</div>
+<h2 class="font-headline-xl text-2xl sm:text-headline-xl text-primary font-bold leading-tight">
+Calcula la gestión de tu propiedad o condominio en Santo Domingo
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+Selecciona tu perfil y completa el formulario correspondiente. Nuestro equipo fiduciario y legal analizará los datos de tu inmueble para enviarte una propuesta formal y personalizada en menos de 24 horas laborables.
+</p>
+<!-- Tarjeta de Confianza / Respaldo Fiduciario -->
+<div class="p-6 rounded-2xl bg-primary text-on-primary flex flex-col gap-space-sm shadow-xl border border-white/10 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-2 text-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+<span class="font-label-lg text-label-lg font-bold">Garantía de Confidencialidad &amp; Respaldo</span>
+</div>
+<p class="text-xs text-surface-container-high leading-relaxed">
+Tus datos patrimoniales y condominales se custodian bajo estricto sigilo fiduciario conforme a la Ley 5038 y normas de protección de datos en República Dominicana.
+</p>
+<div class="pt-4 flex flex-col gap-2.5 text-xs border-t border-white/10 text-surface-variant">
+<a class="flex items-center gap-2 text-secondary-fixed hover:text-white transition-colors" href="https://wa.me/18294554783" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-green-400">chat</span>
+<span class="font-semibold">WhatsApp Directo: +1 (829) 455-4783</span>
+</a>
+<a class="flex items-center gap-2 text-white/90 hover:text-secondary-fixed transition-colors" href="tel:8494453131">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">call</span>
+<span class="">Central Oficina: (849) 445-3131</span>
+</a>
+<a class="flex items-center gap-2 text-white/90 hover:text-secondary-fixed transition-colors" href="mailto:info@wiseservicesrd.com">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">mail</span>
+<span class="">info@wiseservicesrd.com</span>
+</a>
+<div class="flex items-center gap-2 text-[11px] text-surface-variant pt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary-fixed">schedule</span>
+<span class="">Horario de atención: Lun - Vie 8:30 AM - 6:00 PM (Soporte Emergencias 24/7)</span>
+</div>
+</div>
+</div>
+<!-- Badges de Proceso Rápido -->
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+<span class="font-bold text-primary text-xs">Respuesta &lt; 24h</span>
+<span class="text-[11px] text-on-surface-variant leading-tight">Vía WhatsApp o correo</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+<span class="font-bold text-primary text-xs">Cero Compromiso</span>
+<span class="text-[11px] text-on-surface-variant leading-tight">Auditoría inicial 100% gratuita</span>
+</div>
+</div>
+</div>
+<!-- Contenedor Principal del Formulario -->
+<div class="lg:col-span-8 p-6 sm:p-10 rounded-3xl bg-surface-container-lowest shadow-2xl border border-surface-container-high relative">
+<!-- SWITCHER DE PERFIL: TAB BUTTONS ELEGANTES -->
+<div class="p-1.5 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col sm:flex-row gap-2 mb-6">
+<button class="flex-1 flex items-center justify-between p-3.5 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-md" id="quote-tab-propietario" onclick="selectQuoteTab('propietario')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-secondary-fixed">home_work</span>
+<div class="flex flex-col text-left">
+<span class="leading-tight text-sm sm:text-base">Propietario / Inversionista</span>
+<span class="text-[11px] font-normal text-surface-variant">Apartamentos y unidades individuales</span>
+</div>
+</div>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary/20 text-secondary-fixed border border-secondary/30">
+Renta sin fricción
+</span>
+</button>
+<button class="flex-1 flex items-center justify-between p-3.5 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container" id="quote-tab-edificio" onclick="selectQuoteTab('edificio')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
+<div class="flex flex-col text-left">
+<span class="leading-tight text-sm sm:text-base">Junta de Vecinos / Edificio</span>
+<span class="text-[11px] font-normal text-on-surface-variant">Torres residenciales completas</span>
+</div>
+</div>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary-container text-on-primary-container">
+Ley 5038
+</span>
+</button>
+</div>
+<!-- FORMULARIO TAB 1: PROPIETARIO / INVERSIONISTA -->
+<form class="flex flex-col gap-5" id="form-propietario" onsubmit="event.preventDefault(); handleFormSubmit('propietario');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-nombre">Nombre Completo *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="p-nombre" placeholder="Ej. Roberto Morales Sánchez" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-telefono">WhatsApp con Código de País *</label>
+<div class="flex gap-2">
+<select class="h-12 w-28 px-2 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 text-xs font-semibold focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary shrink-0" id="p-cod-pais">
+<option value="+1-rd">+1 (RD)</option>
+<option value="+1-usa">+1 (USA)</option>
+<option value="+34">+34 (ES)</option>
+<option value="+52">+52 (MX)</option>
+<option value="+1-can">+1 (CAN)</option>
+<option value="+other">Otro</option>
+</select>
+<input class="h-12 flex-1 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="p-telefono" placeholder="(829) 000-0000" required="" type="tel">
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-email">Correo Electrónico *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="p-email" placeholder="inversiones@correo.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-residencia">¿Dónde resides actualmente? *</label>
+<select class="h-12 px-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="p-residencia" required="">
+<option value="">- Selecciona tu ubicación -</option>
+<option value="rd">República Dominicana</option>
+<option value="usa-ny">EE.UU. - Nueva York / Tri-State</option>
+<option value="usa-fl">EE.UU. - Florida / Miami</option>
+<option value="usa-otro">EE.UU. - Otros Estados</option>
+<option value="espana">Europa - España</option>
+<option value="europa-otro">Europa - Otros países</option>
+<option value="otro">Otro país</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-ubicacion">Torre o Sector en SD *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="p-ubicacion" placeholder="Ej. Torre Piantini, Bella Vista..." required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-estado-unidad">Estado de la Unidad *</label>
+<select class="h-12 px-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="p-estado-unidad" required="">
+<option value="">- Selecciona estado actual -</option>
+<option value="alquilado">Alquilado actualmente (deseo delegar cobranza y gestión)</option>
+<option value="vacio">Vacío / Listo para amueblar o rentar (buscar inquilino)</option>
+<option value="terminacion">En terminación / Entrega de constructora</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-canon">Canon Mensual Estimado (USD / DOP)</label>
+<select class="h-12 px-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="p-canon">
+<option value="">- Rango de canon estimado -</option>
+<option value="rango-1">US$ 600 - US$ 1,000 / mes (RD$ 35,000 - 60,000)</option>
+<option value="rango-2">US$ 1,000 - US$ 1,600 / mes (RD$ 60,000 - 95,000)</option>
+<option value="rango-3">US$ 1,600 - US$ 2,500 / mes (RD$ 95,000 - 150,000)</option>
+<option value="rango-4">US$ 2,500+ / mes (Segmento Lujo)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<span class="font-label-md text-xs font-bold text-primary uppercase">Servicios Clave que Requieres:</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="servicios-prop" type="checkbox" value="Cobro y dispersión">
+<span class="text-on-surface">Cobro estricto y depósito ACH/Wire a mi cuenta bancaria</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="servicios-prop" type="checkbox" value="Pago de condominio">
+<span class="text-on-surface">Pago puntual de cuotas de torre, servicios y CAASD</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="servicios-prop" type="checkbox" value="Mantenimiento y fotos">
+<span class="text-on-surface">Mantenimiento preventivo con reporte fotográfico</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary accent-secondary" name="servicios-prop" type="checkbox" value="Voz en asamblea">
+<span class="text-on-surface">Representación y defensa fiduciaria en asambleas</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="p-detalles">Notas o Requerimientos Específicos:</label>
+<textarea class="p-3.5 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all resize-none text-sm" id="p-detalles" placeholder="Ej. Vivo en Miami y mi inquilino actual suele retrasarse; me interesa delegar la cobranza completa y recibir el dinero en cuenta de EE.UU..." rows="2"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+<div class="flex flex-col gap-1 text-xs text-on-surface-variant">
+<span class="flex items-center gap-1.5 text-green-700 font-semibold">
+<span class="material-symbols-outlined text-[16px] text-green-600">verified</span>
+Respuesta en menos de 24 horas por WhatsApp o email.
+</span>
+<span class="text-[11px] text-gray-500">Cero spam garantizado • Datos confidenciales protegidos.</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5" type="submit">
+<span class="">Recibir Propuesta de Administración en 24h</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</form>
+<!-- FORMULARIO TAB 2: JUNTA DE VECINOS / ADMINISTRACIÓN DE EDIFICIO COMPLETO -->
+<form class="hidden flex-col gap-5" id="form-edificio" onsubmit="event.preventDefault(); handleFormSubmit('edificio');">
+<div class="p-4 rounded-xl bg-primary-container/10 border border-primary/20 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">account_balance</span>
+<div class="text-xs text-primary leading-relaxed">
+<strong>Auditoría &amp; Gestión Profesional Ley 5038:</strong> Diseñado para directivas y juntas de vecinos que buscan erradicar la morosidad, transparentar las cuentas y mantener en óptimo funcionamiento generadores, bombas y áreas comunes.
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-nombre">Nombre del Solicitante *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-nombre" placeholder="Ej. Lic. Carlos Méndez" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-rol">Rol en la Junta *</label>
+<select class="h-12 px-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-rol" required="">
+<option value="">- Selecciona tu cargo -</option>
+<option value="presidente">Presidente(a) de Junta</option>
+<option value="tesorero">Tesorero(a)</option>
+<option value="secretario">Secretario(a)</option>
+<option value="vocal">Vocal / Miembro de Junta</option>
+<option value="propietario">Propietario condómino</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-telefono">WhatsApp Directo *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-telefono" placeholder="+1 (829) 000-0000" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-email">Correo Electrónico *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-email" placeholder="junta@condominio.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-edificio">Nombre de la Torre o Residencial *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-edificio" placeholder="Ej. Torre Titanium Real" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-zona">Sector o Zona en SD *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-zona" placeholder="Ej. Piantini, Evaristo Morales..." required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-apts">Total Apartamentos *</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-apts" min="2" placeholder="Ej. 24" required="" type="number">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-empleados">Empleados Actuales</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-empleados" min="0" placeholder="Ej. 3 (conserjes/vigilantes)" type="number">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-tss">¿Inscrito en la TSS?</label>
+<select class="h-12 px-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-tss">
+<option value="">- Seleccionar -</option>
+<option value="si">Sí, completamente al día</option>
+<option value="proceso">En proceso de regularización</option>
+<option value="no">No / Desconocido</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-rnc">¿Cuenta con RNC activo?</label>
+<select class="h-12 px-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all text-sm" id="e-rnc">
+<option value="">- Seleccionar -</option>
+<option value="si">Sí, tiene RNC DGII</option>
+<option value="tramite">En trámite</option>
+<option value="no">No cuenta con RNC</option>
+</select>
+</div>
+</div>
+<!-- Checkboxes Áreas Comunes de la Torre -->
+<div class="flex flex-col gap-2 pt-1">
+<span class="font-label-md text-xs font-bold text-primary uppercase">Áreas Comunes y Servicios de la Torre:</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Planta Full">
+<span class="">Planta / Generador Full</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Gas Comun">
+<span class="">Gas Común</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Ascensor">
+<span class="">Ascensor(es)</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Seguridad 24/7">
+<span class="">Seguridad / Control Acceso</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Gimnasio">
+<span class="">Gimnasio</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Piscina / Jacuzzi">
+<span class="">Piscina / Jacuzzi</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Roof Top">
+<span class="">Terraza Común / Roof Top</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary accent-secondary" name="areas-comunes" type="checkbox" value="Paneles Solares">
+<span class="">Paneles Solares Comunes</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-xs font-bold text-primary uppercase" for="e-desafios">Principales Expectativas o Desafíos Actuales:</label>
+<textarea class="p-3.5 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all resize-none text-sm" id="e-desafios" placeholder="Ej. Reducción urgente de morosidad en pagos de cuotas, auditoría contable a la administración saliente y mantenimiento preventivo a la planta eléctrica..." rows="2"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3">
+<span class="text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">gavel</span>
+Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
+</span>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-lg hover:bg-primary-container transition-all transform hover:-translate-y-0.5" type="submit">
+<span class="">Solicitar Propuesta y Auditoría para Junta de Vecinos</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</form>
+<!-- Global Success Banner -->
+<div class="hidden p-5 mt-5 rounded-2xl bg-primary text-on-primary flex items-center gap-4 shadow-lg border border-secondary" id="form-success-banner">
+<span class="material-symbols-outlined text-secondary-fixed text-[36px] shrink-0">task_alt</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-base font-bold text-on-primary">¡Solicitud recibida con éxito!</span>
+<span class="text-xs text-surface-container-high">Un asesor senior de Wise Services RD analizará los datos de tu inmueble y te contactará en menos de 24 horas laborables vía WhatsApp y correo.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BANNER DE CIERRE PERSUASIVO & PORTAL "MI CONDOMINIO" -->
+<section class="w-full py-space-xl bg-primary text-on-primary" id="portal-inquilinos">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
+<div class="p-6 sm:p-10 rounded-3xl bg-primary-container flex flex-col md:flex-row items-center justify-between gap-space-lg border border-white/10 shadow-2xl">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-on-secondary shrink-0 shadow-lg">
+<span class="material-symbols-outlined text-[32px]">smartphone</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-secondary-fixed uppercase tracking-wider text-xs font-bold">Portal Fiduciario 24/7</span>
+<h3 class="font-headline-lg text-xl sm:text-2xl font-bold text-on-primary">Plataforma "Mi Condominio"</h3>
+<p class="font-body-sm text-xs sm:text-sm text-surface-variant">Acceso digital a tus estados de cuenta, transferencias, facturas y actas sin llamadas ni esperas.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 flex-wrap sm:flex-nowrap">
+<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold hover:bg-surface-variant transition-colors shadow-md" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">login</span>
+<span class="">Ingresar al Portal</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-secondary text-white font-label-lg text-label-lg font-bold hover:bg-secondary-container transition-colors shadow-md" href="https://wa.me/18294554783" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="">Atención Rápida</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Scripts de interactividad -->
+<script>
+      let currentScenario = 0;
+      const totalScenarios = 3;
+      let scenarioTimer = null;
+
+      function updateScenarioUI(index) {
+        currentScenario = index;
+        for (let i = 1; i <= totalScenarios; i++) {
+          const panel = document.getElementById(`panel-scenario-${i}`);
+          const tab = document.getElementById(`tab-scenario-${i}`);
+          const progress = document.getElementById(`progress-scenario-${i}`);
+
+          if (i - 1 === index) {
+            if (panel) {
+              panel.classList.remove('opacity-0', 'pointer-events-none');
+              panel.classList.add('opacity-100');
+            }
+            if (tab) {
+              tab.classList.remove('opacity-75', 'bg-white/5');
+              tab.classList.add('bg-white/20', 'ring-1', 'ring-secondary');
+            }
+            if (progress) {
+              progress.classList.remove('scenario-progress-active');
+              void progress.offsetWidth; // trigger reflow
+              progress.classList.add('scenario-progress-active');
+              progress.style.width = '';
+            }
+          } else {
+            if (panel) {
+              panel.classList.remove('opacity-100');
+              panel.classList.add('opacity-0', 'pointer-events-none');
+            }
+            if (tab) {
+              tab.classList.add('opacity-75', 'bg-white/5');
+              tab.classList.remove('bg-white/20', 'ring-1', 'ring-secondary');
+            }
+            if (progress) {
+              progress.classList.remove('scenario-progress-active');
+              progress.style.width = '0%';
+            }
+          }
+        }
+      }
+
+      function startScenarioLoop() {
+        if (scenarioTimer) clearInterval(scenarioTimer);
+        scenarioTimer = setInterval(() => {
+          const next = (currentScenario + 1) % totalScenarios;
+          updateScenarioUI(next);
+        }, 5000);
+      }
+
+      function setScenario(index) {
+        updateScenarioUI(index);
+        startScenarioLoop();
+      }
+
+      function nextScenario() {
+        const next = (currentScenario + 1) % totalScenarios;
+        setScenario(next);
+      }
+
+      function prevScenario() {
+        const prev = (currentScenario - 1 + totalScenarios) % totalScenarios;
+        setScenario(prev);
+      }
+
+      // Initialize simulator loop
+      document.addEventListener('DOMContentLoaded', () => {
+        startScenarioLoop();
+      });
+
+      function switchMainServiceScope(scope) {
+        const propPanel = document.getElementById('panel-scope-propietario');
+        const edifPanel = document.getElementById('panel-scope-edificio');
+        const propBtn = document.getElementById('btn-scope-propietario');
+        const edifBtn = document.getElementById('btn-scope-edificio');
+
+        if (scope === 'propietario') {
+          if (propPanel) propPanel.classList.remove('hidden');
+          if (edifPanel) edifPanel.classList.add('hidden');
+          if (propBtn) propBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm';
+          if (edifBtn) edifBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary';
+        } else {
+          if (propPanel) propPanel.classList.add('hidden');
+          if (edifPanel) edifPanel.classList.remove('hidden');
+          if (propBtn) propBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all text-on-surface-variant hover:text-primary';
+          if (edifBtn) edifBtn.className = 'px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all bg-primary text-on-primary shadow-sm';
+        }
+      }
+
+      function selectQuoteTab(tabName) {
+        const propForm = document.getElementById('form-propietario');
+        const edifForm = document.getElementById('form-edificio');
+        const propTabBtn = document.getElementById('quote-tab-propietario');
+        const edifTabBtn = document.getElementById('quote-tab-edificio');
+
+        if (tabName === 'propietario') {
+          if (propForm) propForm.classList.remove('hidden');
+          if (edifForm) edifForm.classList.add('hidden');
+          if (propTabBtn) propTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-sm';
+          if (edifTabBtn) edifTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container';
+        } else {
+          if (propForm) propForm.classList.add('hidden');
+          if (edifForm) edifForm.classList.remove('hidden');
+          if (propTabBtn) propTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container';
+          if (edifTabBtn) edifTabBtn.className = 'flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold transition-all bg-primary text-on-primary shadow-sm';
+        }
+      }
+
+      function handleFormSubmit(type) {
+        const banner = document.getElementById('form-success-banner');
+        if (banner) {
+          banner.classList.remove('hidden');
+          const activeForm = type === 'propietario' ? document.getElementById('form-propietario') : document.getElementById('form-edificio');
+          if (activeForm) {
+            activeForm.reset();
+          }
+          setTimeout(() => {
+            banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 100);
+        }
+      }
+    </script>
+</main>
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center">
+<a class="flex items-center gap-2 px-4 py-3 rounded-full bg-primary-container text-on-primary shadow-[0_12px_28px_rgba(15,39,68,0.35)] hover:bg-primary transition-all border border-secondary/40 group transform hover:scale-105" href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20me%20gustar%C3%ADa%20asesor%C3%ADa%20para%20administrar%20mi%20apartamento" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[24px] text-green-400">chat</span>
+<div class="flex flex-col text-left">
+<span class="text-[10px] text-secondary-fixed leading-none uppercase font-bold">Atención Inversionistas</span>
+<span class="font-label-md text-xs sm:text-sm leading-tight font-bold">WhatsApp Directo</span>
+</div>
+</a>
+</div>
+<!-- FOOTER -->
+<footer class="w-full bg-primary text-on-primary pt-space-2xl pb-space-xl border-t border-white/5">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl">
+<!-- Info Marca -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md"><img alt="Wise Services RD" class="h-9 sm:h-10 w-auto object-contain" src="assets/images/logo-footer.png"></div>
+<p class="font-body-sm text-xs text-on-primary-container leading-relaxed">
+            Gestión fiduciaria de alquileres residenciales y administración legal de condominios en Santo Domingo. Cuidamos tu patrimonio inmobiliario mientras disfrutas tus ingresos, residas en el país o en el extranjero.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-white transition-colors" href="https://wa.me/18294554783" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<a aria-label="Teléfono" class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white hover:bg-secondary transition-colors" href="tel:8294554783">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+<a aria-label="Email" class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white hover:bg-secondary transition-colors" href="mailto:info@wiseservicesrd.com">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+</div>
+<!-- Enlaces Rápidos -->
+<div class="flex flex-col gap-space-md">
+<h4 class="font-headline-sm text-sm font-bold text-on-primary uppercase tracking-wider text-secondary-fixed">Navegación</h4>
+<ul class="flex flex-col gap-2 font-body-sm text-xs text-on-primary-container">
+<li class=""><a class="hover:text-on-primary transition-colors" href="#hero">Propietarios / Rentas</a></li>
+<li class=""><a class="hover:text-on-primary transition-colors" href="#realidad-rentar">La Realidad de Rentar en SD</a></li>
+<li class=""><a class="hover:text-on-primary transition-colors" href="#como-funciona">Cómo Funciona</a></li>
+<li class=""><a class="hover:text-on-primary transition-colors" href="#pacto-rendimiento">Pacto de Rendimiento</a></li>
+<li class=""><a class="hover:text-on-primary transition-colors" href="#testimonios">Testimonios de Clientes</a></li>
+<li class=""><a class="hover:text-on-primary transition-colors" href="#portal-inquilinos">Portal Clientes</a></li>
+</ul>
+</div>
+<!-- Servicios -->
+<div class="flex flex-col gap-space-md">
+<h4 class="font-headline-sm text-sm font-bold text-on-primary uppercase tracking-wider text-secondary-fixed">Servicios Fiduciarios</h4>
+<ul class="flex flex-col gap-2 font-body-sm text-xs text-on-primary-container">
+<li class=""><span class="hover:text-on-primary transition-colors">Property Management Larga Duración</span></li>
+<li class=""><span class="hover:text-on-primary transition-colors">Cobro Mensual y Dispersión Int'l</span></li>
+<li class=""><span class="hover:text-on-primary transition-colors">Inspecciones con Reportes Fotográficos</span></li>
+<li class=""><span class="hover:text-on-primary transition-colors">Representación en Asambleas de Torre</span></li>
+<li class=""><span class="hover:text-on-primary transition-colors">Administración Integral de Torres Ley 5038</span></li>
+</ul>
+</div>
+<!-- Contacto Santo Domingo -->
+<div class="flex flex-col gap-space-md">
+<h4 class="font-headline-sm text-sm font-bold text-on-primary uppercase tracking-wider text-secondary-fixed">Sede Santo Domingo</h4>
+<div class="flex flex-col gap-2 font-body-sm text-xs text-on-primary-container">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed shrink-0 mt-0.5">pin_drop</span>
+<span class="">Polígono Central (Piantini / Churchill), Santo Domingo, D.N., República Dominicana.</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed shrink-0">call</span>
+<span class="">(829) 455-4783 / (849) 445-3131</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed shrink-0">chat</span>
+<span class="">WhatsApp: +1 (829) 455-4783</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed shrink-0">outgoing_mail</span>
+<span class="">info@wiseservicesrd.com</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed shrink-0">schedule</span>
+<span class="">Emergencias y Soporte Técnico: 24/7</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Footer Bottom -->
+<div class="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-primary-container">
+<p class="">© 2025 Wise Services RD. Todos los derechos reservados. Santo Domingo, República Dominicana.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-on-primary transition-colors" href="#">Términos de Servicio</a>
+<a class="hover:text-on-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-on-primary transition-colors" href="#">Gestión Fiduciaria</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>
