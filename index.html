@@ -285,240 +285,111 @@
 </header>
 <main class="w-full pt-[120px] bg-surface min-h-[calc(100vh-120px)]">
 <div class="flex flex-col w-full">
-<!-- HERO SECTION: PERSUASIÓN PSICOLÓGICA Y DOLORES REALES -->
-<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface-container-lowest to-surface pb-space-2xl" id="hero">
+<!-- HERO SECTION: FULL-BLEED VIDEO CINEMATOGRÁFICO DE FONDO -->
+<section class="relative w-full min-h-[92vh] flex items-center overflow-hidden" id="hero">
+  <!-- 1. FULL-BLEED VIDEO DE FONDO -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden -z-20">
+    <video autoplay muted loop playsinline poster="assets/images/scenario-tower-pool-drone.jpg" class="w-full h-full object-cover object-center scale-105">
+      <source src="assets/videos/hero-drone-video.mp4" type="video/mp4">
+      <source src="assets/videos/hero-drone-video-720p.mp4" type="video/mp4">
+    </video>
+  </div>
 
-      <!-- Ambient Luxury Mesh Glow Orbs -->
-      <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[110px] pointer-events-none -z-10 animate-float-glow"></div>
-      <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[130px] pointer-events-none -z-10 animate-float-glow-delayed"></div>
-      <div class="absolute -bottom-20 left-1/3 w-80 h-80 bg-amber-400/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+  <!-- 2. OVERLAY CINEMATOGRÁFICO DE DOBLE CAPA -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#001229]/95 via-[#001229]/80 to-transparent z-0"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-[#001229] via-transparent to-[#001229]/60 z-0"></div>
 
-<div class="max-w-[1280px] mx-auto px-4 sm:px-margin pt-space-lg sm:pt-space-xl">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-<!-- Columna de Texto Persuasivo -->
-<div class="lg:col-span-6 flex flex-col gap-space-md sm:gap-space-lg">
-<!-- Badge de Promesa Central -->
-<div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/25 text-secondary">
-<span class="material-symbols-outlined text-[17px]">shield_with_heart</span>
-<span class="font-label-caps text-label-caps uppercase tracking-wider font-bold">Renta Sin Estrés en Santo Domingo</span>
-</div>
-<!-- Titular Emocional de Alto Impacto -->
-<div class="flex flex-col gap-3">
-<h1 class="font-display-hero text-3xl sm:text-4xl lg:text-display-hero text-primary tracking-tight font-extrabold leading-[1.12]">
-                  Deja de lidiar con inquilinos, cobros atrasados y averías a deshoras.
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed pt-1">
-<strong class="text-primary font-semibold">Administramos tu apartamento en Santo Domingo</strong> para que solo veas tu renta depositada puntualmente cada mes, vivas en República Dominicana o a miles de kilómetros de distancia (Nueva York, Florida, España, Europa).
-                </p>
-</div>
-<!-- CTAs Principales con Reducción de Fricción -->
-<div class="flex flex-wrap items-center gap-space-md pt-1">
-<a class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-4 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-xl hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5 font-bold shimmer-sweep" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
-<span class="material-symbols-outlined text-[20px]">request_quote</span>
-<span class="">Cotizar Administración de mi Apartamento</span>
-</a>
-<a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg border border-primary/20 hover:bg-surface-container transition-all shadow-sm font-semibold" href="https://wa.me/18294554783?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20para%20mi%20apartamento%20en%20Santo%20Domingo" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[20px] text-green-600">chat</span>
-<span class="">Hablar directo por WhatsApp</span>
-</a>
-</div>
-<!-- 4 Badges de Confianza Fiduciaria -->
-<div class="pt-space-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">check_circle</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Garantía Cero Riesgo</span>
-<span class="text-[12px] text-on-surface-variant leading-tight">Si no cobras, no cobramos</span>
-</div>
-</div>
-<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">payments</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Dispersión ACH / Wire</span>
-<span class="text-[12px] text-on-surface-variant leading-tight">En tu banco RD o EE.UU.</span>
-</div>
-</div>
-<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">home_repair_service</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Técnicos Propios 24/7</span>
-<span class="text-[12px] text-on-surface-variant leading-tight">Precios pactados y fotos</span>
-</div>
-</div>
-<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">gavel</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-[11px] text-primary font-bold uppercase">Defensa Condominal</span>
-<span class="text-[12px] text-on-surface-variant leading-tight">Voz legal en asambleas</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Columna Visual: DYNAMIC MULTI-SCENARIO SIMULATOR PLAYER -->
-<div class="lg:col-span-6 relative flex flex-col items-center">
-<div class="w-full relative rounded-3xl bg-primary-container p-3 sm:p-4 shadow-2xl border border-white/20 overflow-hidden text-on-primary">
-<!-- Top Bar del Simulador -->
-<div class="flex items-center justify-between px-3 py-2 border-b border-white/10 mb-3">
-<div class="flex items-center gap-2">
-<span class="flex h-2.5 w-2.5 relative">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
-</span>
-<span class="font-label-caps text-[11px] tracking-widest uppercase font-bold text-red-300">EN VIVO: Simulación de Gestión Activa</span>
-</div>
-<div class="flex items-center gap-1.5 text-xs text-surface-container-high bg-white/10 px-2.5 py-1 rounded-full backdrop-blur-sm">
-<span class="material-symbols-outlined text-[14px] text-secondary-fixed">pin_drop</span>
-<span class="font-medium text-[11px]">Polígono Central SD</span>
-</div>
-</div>
-<!-- Tabs de Selección de Escenario con Timeline Indicators -->
-<div class="grid grid-cols-3 gap-1.5 sm:gap-2 mb-3">
-<!-- Tab 1 -->
-<button class="scenario-tab text-left p-2 sm:p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden opacity-75 bg-white/5" id="tab-scenario-1" onclick="setScenario(0)">
-<div class="flex items-center gap-1 sm:gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-secondary-fixed">apartment</span>
-<span class="font-label-caps text-[10px] sm:text-xs font-bold leading-tight truncate">1. Renta Lista</span>
-</div>
-<p class="hidden sm:block text-[10px] text-surface-variant truncate mt-0.5">Depuración &amp; Setup</p>
-<!-- Progress bar line -->
-<div class="w-full bg-white/20 h-1 rounded-full mt-1.5 overflow-hidden">
-<div class="h-full bg-secondary transition-all" id="progress-scenario-1" style="width: 0%;"></div>
-</div>
-</button>
-<!-- Tab 2 -->
-<button class="scenario-tab text-left p-2 sm:p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden hover:bg-white/10 opacity-75 bg-white/5" id="tab-scenario-2" onclick="setScenario(1)">
-<div class="flex items-center gap-1 sm:gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-secondary-fixed">build_circle</span>
-<span class="font-label-caps text-[10px] sm:text-xs font-bold leading-tight truncate">2. Averías 24/7</span>
-</div>
-<p class="hidden sm:block text-[10px] text-surface-variant truncate mt-0.5">Técnicos &amp; Fotos</p>
-<div class="w-full bg-white/20 h-1 rounded-full mt-1.5 overflow-hidden">
-<div class="h-full bg-secondary transition-all w-0" id="progress-scenario-2" style="width: 0%;"></div>
-</div>
-</button>
-<!-- Tab 3 -->
-<button class="scenario-tab text-left p-2 sm:p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden hover:bg-white/10 bg-white/20 ring-1 ring-secondary" id="tab-scenario-3" onclick="setScenario(2)">
-<div class="flex items-center gap-1 sm:gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-secondary-fixed">savings</span>
-<span class="font-label-caps text-[10px] sm:text-xs font-bold leading-tight truncate">3. Cobro Puntual</span>
-</div>
-<p class="hidden sm:block text-[10px] text-surface-variant truncate mt-0.5">Dispersión ACH</p>
-<div class="w-full bg-white/20 h-1 rounded-full mt-1.5 overflow-hidden">
-<div class="h-full bg-secondary transition-all w-0 scenario-progress-active" id="progress-scenario-3"></div>
-</div>
-</button>
-</div>
-<!-- Main Screen Showcase Player Container -->
-<div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/20 group">
-<!-- Scenario 1 Display -->
-<div class="scenario-panel absolute inset-0 transition-opacity duration-700 z-10 opacity-0 pointer-events-none" id="panel-scenario-1">
-<img alt="Apartamento amueblado de lujo listo para inquilinos calificados en Piantini / Naco" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/images/piantini-luxury.jpg">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-black/30"></div>
-<!-- Top badge -->
-<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
-<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-white/20 text-xs font-bold text-secondary-fixed shadow-lg">
-<span class="material-symbols-outlined text-[16px]">verified</span>
-<span class="">✨ Unidad Lista para Renta | Depuración 100% Completa</span>
-</span>
-<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-green-500/90 text-white font-bold text-[11px] shadow">
-Inquilino A+
-</span>
-</div>
-<!-- Bottom stats overlay -->
-<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<div>
-<h4 class="font-headline-sm text-base sm:text-lg font-bold text-white leading-tight">Escenario 1: Alquiler Rápido &amp; Impecable</h4>
-<p class="text-xs text-surface-variant">Piantini &amp; Naco • Contratos formales de 12 meses con fiador solidario</p>
-</div>
-<div class="text-right hidden sm:block">
-<span class="text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">Canon Promedio</span>
-<p class="font-headline-sm text-sm font-bold text-white">US$ 1,200 – $2,500/mes</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Scenario 2 Display -->
-<div class="scenario-panel absolute inset-0 transition-opacity duration-700 z-10 opacity-0 pointer-events-none" id="panel-scenario-2">
-<img alt="Técnico propio inspeccionando luminarias y climatización con reporte fotográfico digital" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/images/maintenance-technician.jpg">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-black/30"></div>
-<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
-<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-white/20 text-xs font-bold text-secondary-fixed shadow-lg">
-<span class="material-symbols-outlined text-[16px]">construction</span>
-<span class="">🔧 Inspección &amp; Mantenimiento Preventivo 24/7 | Reporte Fotográfico Enviado</span>
-</span>
-<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-amber-500/90 text-white font-bold text-[11px] shadow">
-Atención en &lt; 2 hrs
-</span>
-</div>
-<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<div>
-<h4 class="font-headline-sm text-base sm:text-lg font-bold text-white leading-tight">Escenario 2: Mantenimiento &amp; Averías Resueltas</h4>
-<p class="text-xs text-surface-variant">Técnicos certificados • Cero llamadas a medianoche para el propietario</p>
-</div>
-<div class="text-right hidden sm:block">
-<span class="text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">Bitácora Digital</span>
-<p class="font-headline-sm text-sm font-bold text-white">Fotos Antes / Después</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Scenario 3 Display -->
-<div class="scenario-panel absolute inset-0 transition-opacity duration-700 z-10 opacity-100" id="panel-scenario-3">
-<img alt="Notificación en smartphone de depósito de renta puntual recibido vía ACH/Wire" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/images/deposit-notification.jpg">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-black/30"></div>
-<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
-<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-white/20 text-xs font-bold text-secondary-fixed shadow-lg">
-<span class="material-symbols-outlined text-[16px]">paid</span>
-<span class="">💵 Renta Depositada Puntual | Cero Estrés ni Retrasos</span>
-</span>
-<span class="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-green-500/90 text-white font-bold text-[11px] shadow">
-Dispersión Directa
-</span>
-</div>
-<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<div>
-<h4 class="font-headline-sm text-base sm:text-lg font-bold text-white leading-tight">Escenario 3: Cobro Puntual &amp; Dispersión</h4>
-<p class="text-xs text-surface-variant">Transferencias ACH Santo Domingo o Wire internacional directo a tu cuenta</p>
-</div>
-<div class="text-right hidden sm:block">
-<span class="text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">Cobranza Efectiva</span>
-<p class="font-headline-sm text-sm font-bold text-white">99.4% Puntualidad</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Floating Navigation Controls overlay -->
-<div class="absolute top-1/2 -translate-y-1/2 left-3 right-3 flex items-center justify-between pointer-events-none z-20">
-<button aria-label="Escenario anterior" class="pointer-events-auto w-9 h-9 rounded-full bg-primary/70 hover:bg-primary text-white backdrop-blur-md flex items-center justify-center border border-white/20 transition-all hover:scale-110" onclick="prevScenario()">
-<span class="material-symbols-outlined text-[20px]">chevron_left</span>
-</button>
-<button aria-label="Siguiente escenario" class="pointer-events-auto w-9 h-9 rounded-full bg-primary/70 hover:bg-primary text-white backdrop-blur-md flex items-center justify-center border border-white/20 transition-all hover:scale-110" onclick="nextScenario()">
-<span class="material-symbols-outlined text-[20px]">chevron_right</span>
-</button>
-</div>
-</div>
-<!-- Floating Glassmorphic Stat Badges Below Player -->
-<div class="grid grid-cols-3 gap-2 mt-3">
-<div class="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col text-center">
-<span class="font-headline-sm text-xs sm:text-sm font-bold text-secondary-fixed">+38% Retención</span>
-<span class="text-[10px] text-surface-variant leading-tight">Inquilinos de largo plazo</span>
-</div>
-<div class="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col text-center">
-<span class="font-headline-sm text-xs sm:text-sm font-bold text-white">0 Llamadas</span>
-<span class="text-[10px] text-surface-variant leading-tight">A medianoche o fines de semana</span>
-</div>
-<div class="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col text-center">
-<span class="font-headline-sm text-xs sm:text-sm font-bold text-secondary-fixed">Reporte HD</span>
-<span class="text-[10px] text-surface-variant leading-tight">Fotográfico en tiempo real</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <!-- 3. CONTENIDO PERSUASIVO SOBRE EL VIDEO (COLUMNA IZQUIERDA) -->
+  <div class="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-margin py-16 sm:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Columna de Texto Persuasivo -->
+      <div class="lg:col-span-8 xl:col-span-7 flex flex-col gap-5 sm:gap-6 text-white">
+        
+        <!-- Badge de Promesa Central Glassmorphic -->
+        <div class="inline-flex items-center gap-2 self-start px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-secondary-fixed shadow-lg">
+          <span class="material-symbols-outlined text-[18px]">shield_with_heart</span>
+          <span class="font-label-caps text-label-caps uppercase tracking-wider font-bold">Renta Sin Estrés en Santo Domingo</span>
+        </div>
+
+        <!-- Titular Emocional de Alto Impacto -->
+        <div class="flex flex-col gap-3">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tight font-extrabold leading-[1.12] drop-shadow-md">
+            Deja de lidiar con inquilinos, cobros atrasados y averías a deshoras.
+          </h1>
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-normal pt-1 drop-shadow">
+            <strong class="text-white font-semibold">Administramos tu apartamento o torre en Santo Domingo</strong> para que solo veas tu renta depositada puntualmente cada mes, vivas en República Dominicana o a miles de kilómetros de distancia (Nueva York, Florida, España, Europa).
+          </p>
+        </div>
+
+        <!-- CTAs Principales con Reducción de Fricción -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-secondary text-white font-label-lg text-label-lg shadow-[0_8px_25px_rgba(234,88,12,0.45)] hover:bg-secondary-container hover:text-white transition-all transform hover:-translate-y-0.5 font-bold shimmer-sweep" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+            <span class="material-symbols-outlined text-[20px]">request_quote</span>
+            <span>Cotizar Administración de mi Inmueble</span>
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md text-white font-label-lg text-label-lg border border-white/30 hover:bg-white/20 transition-all shadow-md font-semibold" href="https://wa.me/18294554783?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20para%20mi%20apartamento%20en%20Santo%20Domingo" rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[20px] text-green-400">chat</span>
+            <span>Hablar directo por WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- 4 Badges de Confianza Fiduciaria en Glassmorphism -->
+        <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">check_circle</span>
+            <div class="flex flex-col">
+              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Garantía Cero Riesgo</span>
+              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">Si no cobras, no cobramos</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">payments</span>
+            <div class="flex flex-col">
+              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Dispersión ACH / Wire</span>
+              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">En tu banco RD o EE.UU.</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">home_repair_service</span>
+            <div class="flex flex-col">
+              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Técnicos 24/7</span>
+              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">Precios pactados y fotos</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">gavel</span>
+            <div class="flex flex-col">
+              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Defensa Legal</span>
+              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">Voz en asambleas torre</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Columna Derecha: Tarjeta Flotante Minimalista de Estatus en Vivo de la Torre -->
+      <div class="hidden lg:flex lg:col-span-4 xl:col-span-5 flex-col items-end justify-end self-end mb-4">
+        <div class="p-4 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/20 text-white flex items-center gap-3 shadow-2xl">
+          <div class="relative flex h-3 w-3 shrink-0">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-[11px] font-bold text-secondary-fixed uppercase tracking-wider">Gestión Activa en Vivo</span>
+            <span class="text-xs text-slate-200">Torre Residencial &bull; Santo Domingo, D.N.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FADE TRANSITION AL FONDO DEL HERO HACIA EL SIGUIENTE SECTION -->
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-container-lowest to-transparent pointer-events-none z-10"></div>
 </section>
 
     <!-- TELEMETRÍA EN VIVO Y KPIs DE CONFIANZA FIDUCIARIA -->
