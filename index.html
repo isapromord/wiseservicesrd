@@ -20,6 +20,70 @@
     .scenario-progress-active {
       animation: progressAnim 5000ms linear forwards;
     }
+  
+    /* LUXURY VISUAL EFFECTS & ANIMATIONS */
+    @keyframes floatGlow {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-24px) scale(1.08); }
+    }
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-150%); }
+      35%, 100% { transform: translateX(250%); }
+    }
+    .animate-float-glow {
+      animation: floatGlow 10s ease-in-out infinite;
+    }
+    .animate-float-glow-delayed {
+      animation: floatGlow 13s ease-in-out 3s infinite;
+    }
+    .shimmer-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-sweep::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent 35%, rgba(255, 255, 255, 0.35) 50%, transparent 65%);
+      transform: translateX(-150%);
+      animation: shimmerSweep 4s infinite;
+      pointer-events: none;
+    }
+    .reveal-init {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-init.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .luxury-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+    }
+    .luxury-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px -10px rgba(15, 39, 68, 0.12), 0 0 25px -5px rgba(234, 88, 12, 0.1);
+    }
+    .range-slider-thumb::-webkit-slider-thumb {
+      appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #ea580c;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.5);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .range-slider-thumb::-webkit-slider-thumb:hover {
+      transform: scale(1.18);
+    }
+
   </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -179,7 +243,7 @@
 <span class="material-symbols-outlined text-[17px] text-secondary">lock</span>
 <span class="">Portal Clientes</span>
 </a>
-<a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-[0_4px_14px_rgba(167,58,0,0.28)] hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+<a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-[0_4px_14px_rgba(167,58,0,0.28)] shimmer-sweep hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
 <span class="material-symbols-outlined text-[18px]">calculate</span>
 <span class="">Calcular mi Cuota / Cotizar</span>
 </a>
@@ -190,6 +254,12 @@
 <div class="flex flex-col w-full">
 <!-- HERO SECTION: PERSUASIÓN PSICOLÓGICA Y DOLORES REALES -->
 <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface-container-lowest to-surface pb-space-2xl" id="hero">
+
+      <!-- Ambient Luxury Mesh Glow Orbs -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[110px] pointer-events-none -z-10 animate-float-glow"></div>
+      <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[130px] pointer-events-none -z-10 animate-float-glow-delayed"></div>
+      <div class="absolute -bottom-20 left-1/3 w-80 h-80 bg-amber-400/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin pt-space-lg sm:pt-space-xl">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 <!-- Columna de Texto Persuasivo -->
@@ -210,7 +280,7 @@
 </div>
 <!-- CTAs Principales con Reducción de Fricción -->
 <div class="flex flex-wrap items-center gap-space-md pt-1">
-<a class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-4 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-xl hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5 font-bold" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+<a class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-4 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-xl hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5 font-bold shimmer-sweep" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
 <span class="material-symbols-outlined text-[20px]">request_quote</span>
 <span class="">Cotizar Administración de mi Apartamento</span>
 </a>
@@ -417,8 +487,48 @@ Dispersión Directa
 </div>
 </div>
 </section>
+
+    <!-- TELEMETRÍA EN VIVO Y KPIs DE CONFIANZA FIDUCIARIA -->
+    <section class="relative w-full py-10 bg-surface-container-lowest border-y border-outline-variant/30 overflow-hidden">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
+          <div class="flex flex-col items-center justify-center p-5 rounded-2xl bg-surface-container-low/70 border border-outline-variant/40 reveal-init luxury-card">
+            <div class="flex items-baseline gap-1 text-primary">
+              <span class="text-3xl sm:text-4xl font-extrabold tracking-tight counter-number" data-target="150" data-prefix="+">0</span>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-primary mt-1.5">Propiedades &amp; Condos</span>
+            <span class="text-[11px] text-on-surface-variant">Bajo gestión activa en Santo Domingo</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-5 rounded-2xl bg-surface-container-low/70 border border-outline-variant/40 reveal-init luxury-card" style="transition-delay: 100ms;">
+            <div class="flex items-baseline gap-1 text-secondary">
+              <span class="text-3xl sm:text-4xl font-extrabold tracking-tight counter-number" data-target="99.4" data-suffix="%" data-decimals="1">0</span>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-primary mt-1.5">Cobranza Puntual</span>
+            <span class="text-[11px] text-on-surface-variant">Dispersión ACH / Wire puntual</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-5 rounded-2xl bg-surface-container-low/70 border border-outline-variant/40 reveal-init luxury-card" style="transition-delay: 200ms;">
+            <div class="flex items-baseline gap-1 text-primary">
+              <span class="text-3xl sm:text-4xl font-extrabold tracking-tight counter-number" data-target="2" data-prefix="&lt; " data-suffix=" hrs">0</span>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-primary mt-1.5">Tiempo de Respuesta</span>
+            <span class="text-[11px] text-on-surface-variant">Técnicos propios ante averías 24/7</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-5 rounded-2xl bg-surface-container-low/70 border border-outline-variant/40 reveal-init luxury-card" style="transition-delay: 300ms;">
+            <div class="flex items-baseline gap-1 text-green-700">
+              <span class="text-3xl sm:text-4xl font-extrabold tracking-tight counter-number" data-target="100" data-suffix="%">0</span>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-primary mt-1.5">Garantía Cero Riesgo</span>
+            <span class="text-[11px] text-on-surface-variant">Si no cobras, no cobramos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <!-- NUEVA SECCIÓN DE DOLOR VS. PAZ MENTAL ("La Realidad de Rentar en Santo Domingo") -->
-<section class="w-full py-space-2xl bg-surface-container-low" id="realidad-rentar">
+<section class="w-full py-space-2xl bg-surface-container-low reveal-init" id="realidad-rentar">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
 <div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-2">
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
@@ -434,7 +544,7 @@ Dispersión Directa
 <!-- COMPARATIVA LADO A LADO -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-stretch">
 <!-- Lado Rojo: Gestionar por cuenta propia / corredor informal -->
-<div class="rounded-2xl bg-surface-container-lowest border-2 border-red-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="rounded-2xl bg-surface-container-lowest border-2 border-red-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden luxury-card reveal-init">
 <div class="absolute top-0 left-0 right-0 h-2 bg-red-400"></div>
 <div class="flex flex-col gap-space-md">
 <div class="flex items-center justify-between pb-4 border-b border-surface-container">
@@ -525,7 +635,7 @@ Dispersión Directa
 </div>
 </section>
 <!-- CÓMO FUNCIONA EN 3 PASOS SIMPLES (Claridad Absoluta) -->
-<section class="w-full py-space-2xl bg-surface" id="como-funciona">
+<section class="w-full py-space-2xl bg-surface reveal-init" id="como-funciona">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
 <div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-2">
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-secondary-fixed font-label-caps text-label-caps uppercase tracking-wider font-bold">
@@ -597,7 +707,7 @@ Dispersión Directa
 </div>
 </section>
 <!-- MODELO DE HONORARIOS TRANSPARENTE & "PACTO DE RENDIMIENTO" -->
-<section class="w-full py-space-2xl bg-surface-container-low" id="pacto-rendimiento">
+<section class="w-full py-space-2xl bg-surface-container-low reveal-init" id="pacto-rendimiento">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
 <div class="rounded-3xl bg-primary text-on-primary p-6 sm:p-12 shadow-2xl relative overflow-hidden">
 <!-- Decoración de fondo -->
@@ -666,7 +776,7 @@ Dispersión Directa
 </div>
 </section>
 <!-- TESTIMONIOS REALES Y PRUEBA SOCIAL (Diáspora e Inversionistas Locales) -->
-<section class="w-full py-space-2xl bg-surface" id="testimonios">
+<section class="w-full py-space-2xl bg-surface reveal-init" id="testimonios">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
 <div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-2">
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
@@ -756,7 +866,7 @@ Dispersión Directa
 </div>
 </section>
 <!-- SECCIÓN DUAL DE SERVICIOS (CATÁLOGO PROPIETARIOS / EDIFICIOS) -->
-<section class="w-full py-space-2xl bg-surface-container-low" id="servicios-catalogo">
+<section class="w-full py-space-2xl bg-surface-container-low reveal-init" id="servicios-catalogo">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div>
@@ -903,6 +1013,80 @@ Dispersión Directa
 <!-- FORMULARIO DE CAPTACIÓN ÁGIL (OPTIMIZADO PARA CONVERSIÓN DE PROPIETARIOS Y EDIFICIOS) -->
 <section class="w-full py-space-2xl bg-surface-container-low" id="cotizacion-gratis">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
+
+        <!-- CALCULADORA INTERACTIVA DE RENDIMIENTO Y PAZ MENTAL -->
+        <div class="w-full mb-12 p-6 sm:p-9 rounded-3xl bg-gradient-to-br from-primary via-primary-container to-primary text-on-primary shadow-2xl border border-white/15 relative overflow-hidden reveal-init">
+          <div class="absolute -right-20 -top-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative z-10 flex flex-col gap-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
+              <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-secondary-fixed text-xs font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-[15px]">calculate</span> Simulador Financiero en Tiempo Real
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Calcula tu Rentabilidad &amp; Paz Mental</h3>
+                <p class="text-xs sm:text-sm text-surface-container-high mt-1 max-w-xl">Desliza para ver tus ingresos anuales proyectados y cuánto estrés te ahorras delegando la gestión con Wise Services.</p>
+              </div>
+              
+              <div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20 text-center shrink-0">
+                <span class="text-[11px] text-secondary-fixed font-bold uppercase tracking-wider block">Canon Mensual</span>
+                <span class="text-3xl font-extrabold text-white" id="slider-val-display">US$ 1,500</span>
+                <span class="text-[11px] text-surface-variant block mt-0.5" id="slider-dop-display">≈ RD$ 90,000 / mes</span>
+              </div>
+            </div>
+
+            <!-- Range Slider -->
+            <div class="flex flex-col gap-2.5">
+              <div class="flex justify-between text-xs text-surface-variant font-semibold">
+                <span>US$ 500/mes (Estudio/1H)</span>
+                <span>US$ 2,500/mes (Torre Piantini)</span>
+                <span>US$ 5,000/mes (Penthouse Lujo)</span>
+              </div>
+              <input type="range" id="rent-range-slider" min="500" max="5000" step="50" value="1500" class="w-full h-3.5 bg-white/20 rounded-lg appearance-none cursor-pointer range-slider-thumb accent-secondary">
+            </div>
+
+            <!-- Result Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
+                <span class="text-[11px] text-surface-variant uppercase tracking-wider font-semibold">Renta Anual Proyectada</span>
+                <span class="text-2xl font-extrabold text-white mt-1" id="calc-rent-annual">US$ 18,000</span>
+                <span class="text-[10px] text-secondary-fixed mt-0.5">12 meses de flujo patrimonial</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
+                <span class="text-[11px] text-surface-variant uppercase tracking-wider font-semibold">Honorario Wise (10%)</span>
+                <span class="text-2xl font-extrabold text-secondary-fixed mt-1" id="calc-fee-monthly">US$ 150 <span class="text-xs font-normal text-white">/mes</span></span>
+                <span class="text-[10px] text-surface-container-high mt-0.5">Solo si el inquilino paga</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
+                <span class="text-[11px] text-surface-variant uppercase tracking-wider font-semibold">Neto Líquido a tu Banco</span>
+                <span class="text-2xl font-extrabold text-green-400 mt-1" id="calc-net-monthly">US$ 1,350 <span class="text-xs font-normal text-white">/mes</span></span>
+                <span class="text-[10px] text-surface-container-high mt-0.5">Vía ACH RD o Wire EE.UU.</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
+                <span class="text-[11px] text-surface-variant uppercase tracking-wider font-semibold">Tiempo &amp; Estrés Ahorrado</span>
+                <span class="text-2xl font-extrabold text-amber-400 mt-1" id="calc-hours-saved">~144 horas</span>
+                <span class="text-[10px] text-surface-container-high mt-0.5">Cero llamadas ni cobros</span>
+              </div>
+            </div>
+
+            <!-- CTA button within calculator -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t border-white/10">
+              <div class="flex items-center gap-2 text-xs text-surface-container-high">
+                <span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified</span>
+                <span>Incluye depuración legal de inquilinos, contratos formales e inspecciones fotográficas 24/7.</span>
+              </div>
+              <button type="button" onclick="applyCalculatorValue()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-secondary text-on-secondary font-bold text-sm shadow-xl hover:bg-secondary-container transition-all transform hover:-translate-y-0.5 shimmer-sweep">
+                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                <span>Aplicar a mi formulario</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
 <!-- Columna Lateral Fiduciaria & Confianza -->
 <div class="lg:col-span-4 flex flex-col gap-space-md">
@@ -1477,5 +1661,36 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 </div>
 </footer>
 
+
+
+  <!-- TOAST NOTIFICACIÓN DE ACTIVIDAD SOCIAL EN VIVO -->
+  <aside id="social-proof-toast" aria-label="Notificaciones de actividad en vivo" class="fixed bottom-6 left-6 z-40 max-w-sm p-4 rounded-2xl bg-primary-container/95 text-on-primary border border-white/20 shadow-2xl backdrop-blur-xl transition-all duration-500 translate-y-32 opacity-0 flex items-start gap-3 pointer-events-auto">
+    <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+      <span class="material-symbols-outlined text-[20px]" id="toast-icon">apartment</span>
+    </div>
+    <div class="flex flex-col flex-1 pr-1">
+      <div class="flex items-center justify-between">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-secondary-fixed flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          Actividad Reciente
+        </span>
+        <span class="text-[10px] text-surface-variant" id="toast-time">Hace 8 min</span>
+      </div>
+      <p class="text-xs text-white mt-1 leading-snug font-medium" id="toast-msg">Torre en Piantini acaba de sumarse a administración Wise Services.</p>
+    </div>
+    <button aria-label="Cerrar notificación" onclick="dismissToast()" class="text-white/60 hover:text-white p-1 rounded-lg">
+      <span class="material-symbols-outlined text-[16px]">close</span>
+    </button>
+  </aside>
+
+  <!-- FLOATING WHATSAPP PILL CON PULSO RADAR ACTIVO -->
+  <a href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20quisiera%20asesor%C3%ADa%20para%20administrar%20mi%20propiedad%20en%20Santo%20Domingo" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-[#25D366] text-white font-bold text-xs sm:text-sm shadow-[0_8px_25px_rgba(37,211,102,0.4)] hover:shadow-[0_12px_30px_rgba(37,211,102,0.55)] hover:scale-105 transition-all group">
+    <span class="relative flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+    </span>
+    <span class="hidden sm:inline-block font-semibold">Asesor Inversionistas 24/7</span>
+    <span class="material-symbols-outlined text-[20px]">chat</span>
+  </a>
 
 </body></html>
