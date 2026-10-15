@@ -13,3 +13,13 @@
 - **Faststart Streaming for Web Video Delivery:**
   - Large MP4 video files (~25MB) downloaded from Google Drive stall browsers unless the `moov` atom is placed at the front.
   - Optimization: Ran `ffmpeg` with `-movflags +faststart -crf 24 -an` producing a 6.4MB 1080p stream and a 2.8MB 720p fallback, enabling instant autoplay.
+
+
+### [2026-10-15] Wise Services RD - Hero Video Replacement
+- **User Request:** Replaced the previous drone pool footage with the newly provided interior video (`1xpE5KhjPDLixgxqEpE4wZyEKZxpduGOV`).
+- **Asset Processing:**
+  - Original 1080p source: 20.8 MB with audio.
+  - Optimized 1080p (`hero-drone-video.mp4`): 6.8 MB, audio stripped, CRF 23, `+faststart` moov atom.
+  - Optimized 720p fallback (`hero-drone-video-720p.mp4`): 2.8 MB, CRF 25, `+faststart`.
+  - Extracted poster frame (`hero-video-poster.jpg`) for seamless instant display while streaming.
+- **Git Commit:** `2fe5955` pushed to `main`.
