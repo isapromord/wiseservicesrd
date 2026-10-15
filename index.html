@@ -1709,7 +1709,7 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
           toast.classList.remove('translate-y-0', 'opacity-100');
           toast.classList.add('translate-y-32', 'opacity-0');
         }
-      }, 5500);
+      }, 4500);
 
       socialIdx = (socialIdx + 1) % socialEvents.length;
     }
@@ -1727,10 +1727,11 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
     document.addEventListener('DOMContentLoaded', () => {
       startScenarioLoop();
       initCounters();
+      // Toast espaciado: primer popup a los 12 seg, luego cada 45 seg para no saturar al usuario
       setTimeout(() => {
         showNextSocialToast();
-        setInterval(showNextSocialToast, 14000);
-      }, 3500);
+        setInterval(showNextSocialToast, 45000);
+      }, 12000);
     });
   </script>
 
