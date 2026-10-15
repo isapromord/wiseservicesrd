@@ -1,7 +1,35 @@
-﻿<!DOCTYPE html><html lang="es"><head>
+<!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="web_standard" name="shell-type">
+<meta name="description" content="Administración integral de apartamentos y condominios en Santo Domingo (Piantini, Naco, Bella Vista). Inquilinos depurados, cobro puntual y mantenimiento 24/7.">
+<meta name="keywords" content="administracion de propiedades santo domingo, property management republica dominicana, cobro de alquileres santo domingo, administracion condominios piantini naco bella vista">
+<meta property="og:title" content="Wise Services RD | Property Management en Santo Domingo">
+<meta property="og:description" content="Tu renta puntual cada mes en tu cuenta, sin llamadas ni atrasos. Gestión integral de apartamentos y condominios en Santo Domingo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://isapromord.github.io/wiseservicesrd/">
+<meta property="og:image" content="https://isapromord.github.io/wiseservicesrd/assets/images/hero-video-poster.jpg">
+
+<!-- Lenis Smooth Scroll -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.css">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+<!-- GSAP & ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Wise Services RD",
+  "description": "Administración integral de inmuebles residenciales, condominios y property management en Santo Domingo, República Dominicana.",
+  "url": "https://isapromord.github.io/wiseservicesrd/",
+  "telephone": "+1-829-455-4783",
+  "areaServed": ["Distrito Nacional", "Piantini", "Naco", "Bella Vista", "Evaristo Morales", "Anacaona"]
+}
+</script>
+
 <title>Wise Services RD | Property Management &amp; Administración de Condominios en Santo Domingo</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -12,6 +40,27 @@
       main > :first-child { margin-top:0 !important; }
       main > :last-child { margin-bottom:0 !important; }
     }
+    
+    /* LUXURY COMMERCIAL ANIMATIONS & 3D CARD PHYSICS */
+    .pro-tilt-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .pro-tilt-card:hover {
+      box-shadow: 0 20px 40px -12px rgba(0, 18, 41, 0.18), 0 0 25px -5px rgba(224, 83, 5, 0.12) !important;
+    }
+    /* SMOOTH STAGGER REVEAL */
+    .pro-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pro-reveal.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* scrollbar updated */
     @keyframes progressAnim {
       from { width: 0%; }
@@ -21,6 +70,72 @@
       animation: progressAnim 5000ms linear forwards;
     }
   
+    
+    /* ========================================================
+       ELEVATED CINEMATIC LUXURY EFFECTS (WOW FACTOR WITHOUT THE CLUTTER)
+       ======================================================== */
+    
+    /* 1. Subtle Film Grain for depth */
+    .film-grain {
+      position: fixed; inset: -50%; z-index: 999; pointer-events: none; opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* 2. Scroll Progress Glow Bar at very top */
+    .scroll-progress-line {
+      position: fixed; top: 0; left: 0; height: 3px; width: 100%;
+      background: linear-gradient(90deg, #ea580c, #f59e0b, #10b981);
+      transform-origin: 0 50%; transform: scaleX(0); z-index: 100;
+    }
+
+    /* 3. Luxury Glass Cards with Interactive Glow */
+    .luxury-glass-card {
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 10px 25px -5px rgba(0, 18, 41, 0.05), 0 8px 10px -6px rgba(0, 18, 41, 0.03);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .luxury-glass-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(400px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(234, 88, 12, 0.08), transparent 45%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .luxury-glass-card:hover::before {
+      opacity: 1;
+    }
+    .luxury-glass-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 40px -10px rgba(0, 18, 41, 0.12), 0 0 25px -5px rgba(234, 88, 12, 0.15);
+      border-color: rgba(234, 88, 12, 0.35);
+    }
+
+    /* 4. Magnetic & Glowing CTAs */
+    .glow-btn {
+      position: relative;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glow-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -5px rgba(234, 88, 12, 0.5) !important;
+    }
+
+    /* 5. Smooth Scroll-Driven Section Reveals */
+    .scroll-reveal-item {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal-item.is-in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* LUXURY VISUAL EFFECTS & ANIMATIONS */
     @keyframes floatGlow {
       0%, 100% { transform: translateY(0px) scale(1); }
@@ -227,144 +342,153 @@
   </script>
 <link rel="icon" type="image/png" href="https://i.postimg.cc/FRfVXCZJ/WISE-Bolas-pdf-(1080-x-1080-px).png"></head>
 <body class="bg-surface font-body-md text-body-md text-on-surface">
+<div class="film-grain"></div>
+<div class="scroll-progress-line" id="progressBar"></div>
 <!-- TOPBAR PERSUASIVO & SELECTOR DE CONTACTO -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl shadow-[0_2px_12px_rgba(15,39,68,0.08)]">
-<div class="bg-primary-container text-on-primary font-label-caps text-label-caps border-b border-white/5">
-<div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex items-center justify-between h-10">
-<!-- Teléfonos Directos & Diáspora -->
-<div class="flex items-center gap-space-md sm:gap-space-lg text-[11px] sm:text-xs">
-<span class="flex items-center gap-1.5 text-secondary-fixed font-semibold">
-<span class="material-symbols-outlined text-[15px]">verified</span>
-            RD &amp; Diáspora (EE.UU., España, Europa)
-          </span>
-<div class="hidden md:flex items-center gap-4">
-<a class="flex items-center gap-1 hover:text-secondary-fixed transition-colors" href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20para%20administrar%20mi%20apartamento%20en%20RD" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[14px] text-green-400">chat</span>
-              WhatsApp RD/EE.UU: +1 (829) 455-4783
-            </a>
-<span class="text-white/30">|</span>
-<a class="flex items-center gap-1 hover:text-secondary-fixed transition-colors" href="tel:8494453131">
-<span class="material-symbols-outlined text-[14px]">call</span>
-              Oficina: (849) 445-3131
-            </a>
-</div>
-</div>
-<!-- Selector rápido WhatsApp y Garantía -->
-<div class="flex items-center gap-3">
-<a class="inline-flex items-center gap-1 text-[11px] sm:text-xs text-secondary-fixed hover:text-white transition-colors" href="https://wa.me/18294554783" target="_blank">
-<span class="material-symbols-outlined text-[14px]">support_agent</span>
-<span class="font-bold">Chat Inversionistas 24/7</span>
-</a>
-</div>
-</div>
-</div>
-<!-- MAIN NAVBAR -->
-<div class="h-20 max-w-[1280px] mx-auto px-4 sm:px-margin flex items-center justify-between">
-<a class="flex items-center gap-2 group shrink-0 mr-4 lg:mr-8" href="#hero"><img alt="Wise Services RD" class="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" src="assets/images/logo-header.png"></a>
-<!-- Desktop Links -->
-<nav class="hidden lg:flex items-center gap-4 xl:gap-6">
-<a class="font-label-lg text-label-lg text-primary font-bold hover:text-secondary transition-colors" href="#hero">Propietarios</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#realidad-rentar">Dolor vs. Paz Mental</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#como-funciona">Cómo Funciona</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#pacto-rendimiento">Pacto Rendimiento</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#testimonios">Testimonios</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#servicios-catalogo">Torres &amp; Condos</a>
-</nav>
-<!-- Right CTAs -->
-<div class="flex items-center gap-space-sm sm:gap-space-md">
-<a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md border border-outline-variant/40 hover:bg-surface-container-high transition-all" href="#portal-inquilinos">
-<span class="material-symbols-outlined text-[17px] text-secondary">lock</span>
-<span class="">Portal Clientes</span>
-</a>
-<a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-[0_4px_14px_rgba(167,58,0,0.28)] shimmer-sweep hover:bg-secondary-container hover:text-on-secondary-container transition-all transform hover:-translate-y-0.5" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
-<span class="material-symbols-outlined text-[18px]">calculate</span>
-<span class="">Calcular mi Cuota / Cotizar</span>
-</a>
-</div>
-</div>
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-100">
+  <!-- TOPBAR COMPACTO Y RESPONSIVE -->
+  <div class="bg-[#001229] text-white font-label-caps text-[11px] border-b border-white/5 py-1.5 px-3 sm:px-6">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between gap-2 overflow-hidden">
+      <!-- Diáspora y Cobertura -->
+      <span class="flex items-center gap-1.5 text-secondary-fixed font-semibold truncate">
+        <span class="material-symbols-outlined text-[14px] shrink-0 text-amber-400">verified</span>
+        <span class="truncate">RD & Diáspora (EE.UU., España, Europa)</span>
+      </span>
+      <!-- Canales Rápidos -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="hidden sm:flex items-center gap-1 hover:text-secondary-fixed transition-colors text-[11px]" href="https://wa.me/18294554783" target="_blank">
+          <span class="material-symbols-outlined text-[13px] text-green-400">chat</span>
+          <span>+1 (829) 455-4783</span>
+        </a>
+        <a class="flex items-center gap-1 text-secondary-fixed hover:text-white transition-colors text-[11px] font-bold" href="https://wa.me/18294554783" target="_blank">
+          <span class="material-symbols-outlined text-[13px] text-green-400">support_agent</span>
+          <span>WhatsApp 24/7</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVBAR FLUIDO Y 100% RESPONSIVE -->
+  <div class="h-16 sm:h-20 max-w-[1280px] mx-auto px-3 sm:px-6 flex items-center justify-between gap-2">
+    <!-- Logo -->
+    <a class="flex items-center gap-2 shrink-0" href="#hero">
+      <img alt="Wise Services RD" class="h-8 sm:h-11 w-auto object-contain transition-transform hover:scale-105" src="assets/images/logo-header.png">
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-5 xl:gap-7">
+      <a class="text-sm font-semibold text-primary hover:text-secondary transition-colors" href="#hero">Propietarios</a>
+      <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#realidad-rentar">Dolor vs. Paz Mental</a>
+      <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#como-funciona">Cómo Funciona</a>
+      <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#pacto-rendimiento">Propuesta</a>
+      <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#testimonios">Testimonios</a>
+      <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#servicios-catalogo">Torres & Condos</a>
+    </nav>
+
+    <!-- CTAs Header Adaptativos -->
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      <!-- Botón Portal Clientes -->
+      <a class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-primary font-bold text-xs sm:text-sm border border-slate-200 transition-all shrink-0 shadow-sm" href="http://localhost:5173" target="_blank" rel="noopener noreferrer" title="Ir al Portal de Clientes">
+        <span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+        <span>Portal</span>
+      </a>
+
+      <!-- Botón Cotizar -->
+      <a class="inline-flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-secondary text-white font-bold text-xs sm:text-sm shadow-md hover:bg-secondary-container transition-all shrink-0" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+        <span class="material-symbols-outlined text-[16px] sm:text-[18px]">calculate</span>
+        <span class="whitespace-nowrap">Cotizar</span>
+      </a>
+    </div>
+  </div>
 </header>
-<main class="w-full pt-[120px] bg-surface min-h-[calc(100vh-120px)]">
+<main class="w-full pt-[85px] sm:pt-[110px] bg-surface min-h-screen overflow-x-hidden">
 <div class="flex flex-col w-full">
 <!-- HERO SECTION: FULL-BLEED VIDEO CINEMATOGRÁFICO DE FONDO -->
-<section class="relative w-full min-h-[92vh] flex items-center overflow-hidden" id="hero">
+<section class="relative w-full min-h-[90vh] sm:min-h-[92vh] flex items-center overflow-hidden" id="hero">
   <!-- 1. FULL-BLEED VIDEO DE FONDO -->
   <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-video-poster.jpg" class="w-full h-full object-cover object-center scale-105">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-video-poster.jpg" class="w-full h-full object-cover object-center scale-105 opacity-80 sm:opacity-95">
       <source src="assets/videos/hero-drone-video.mp4" type="video/mp4">
       <source src="assets/videos/hero-drone-video-720p.mp4" type="video/mp4">
     </video>
   </div>
 
-  <!-- 2. OVERLAY CINEMATOGRÁFICO DE DOBLE CAPA -->
-  <div class="absolute inset-0 bg-gradient-to-r from-[#001229] from-28% via-[#001229]/90 via-36% to-transparent to-46% z-[1] pointer-events-none"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-[#001229] via-transparent via-25% to-transparent z-[1] pointer-events-none"></div>
+  <!-- 2. OVERLAYS CINEMATOGRÁFICOS DE ALTO CONTRASTE (WCAG AAA) -->
+  <!-- En móvil (<1024px): Scrim oscuro continuo garantizado por CSS inline para que la tipografía blanca sea 100% nítida y legible -->
+  <div class="block lg:hidden absolute inset-0 z-[1] pointer-events-none" style="background: linear-gradient(180deg, rgba(2, 28, 57, 0.94) 0%, rgba(2, 28, 57, 0.88) 55%, rgba(2, 28, 57, 0.97) 100%);"></div>
+  
+  <!-- En desktop (>=1024px): Gradiente cinemático de izquierda a derecha -->
+  <div class="hidden lg:block absolute inset-0 z-[1] pointer-events-none" style="background: linear-gradient(90deg, rgba(2, 28, 57, 0.98) 0%, rgba(2, 28, 57, 0.92) 42%, rgba(2, 28, 57, 0.45) 75%, rgba(2, 28, 57, 0.15) 100%);"></div>
+  
+  <!-- Viñeta suave en base para transición al contenido inferior -->
+  <div class="absolute inset-0 z-[1] pointer-events-none" style="background: linear-gradient(to top, rgba(2, 28, 57, 0.7) 0%, transparent 22%);"></div>
 
-  <!-- 3. CONTENIDO PERSUASIVO SOBRE EL VIDEO (COLUMNA IZQUIERDA) -->
-  <div class="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-margin py-16 sm:py-24">
+  <!-- 3. CONTENIDO PERSUASIVO SOBRE EL VIDEO -->
+  <div class="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-margin py-8 sm:py-16 lg:py-24">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       
       <!-- Columna de Texto Persuasivo -->
-      <div class="lg:col-span-8 xl:col-span-7 flex flex-col gap-5 sm:gap-6 text-white">
+      <div class="lg:col-span-8 xl:col-span-7 flex flex-col gap-4 sm:gap-6 text-white">
         
         <!-- Badge de Promesa Central Glassmorphic -->
-        <div class="inline-flex items-center gap-2 self-start px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-secondary-fixed shadow-lg">
-          <span class="material-symbols-outlined text-[18px]">shield_with_heart</span>
-          <span class="font-label-caps text-label-caps uppercase tracking-wider font-bold">Renta Sin Estrés en Santo Domingo</span>
+        <div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-amber-300 shadow-md">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-amber-400">shield_with_heart</span>
+          <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider">Renta Sin Estrés en Santo Domingo</span>
         </div>
 
         <!-- Titular Emocional de Alto Impacto -->
-        <div class="flex flex-col gap-3">
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tight font-extrabold leading-[1.12] drop-shadow-md">
-            Deja de lidiar con inquilinos, cobros atrasados y averías a deshoras.
+        <div class="flex flex-col gap-2.5 sm:gap-3">
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight font-extrabold leading-[1.2] drop-shadow-md">
+            Tu renta en tu cuenta cada mes. <br class="hidden sm:inline"><span class="text-amber-400 font-extrabold">Sin llamadas. Sin atrasos.</span>
           </h1>
-          <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-normal pt-1 drop-shadow">
-            <strong class="text-white font-semibold">Administramos tu apartamento o torre en Santo Domingo</strong> para que solo veas tu renta depositada puntualmente cada mes, vivas en República Dominicana o a miles de kilómetros de distancia (Nueva York, Florida, España, Europa).
+          <p class="text-sm sm:text-base lg:text-lg text-slate-200 max-w-xl leading-relaxed font-normal pt-1 drop-shadow">
+            Inquilinos depurados, contratos blindados y mantenimiento 24/7. Cuidamos tu propiedad en Santo Domingo para que solo veas tu depósito puntual, estés en el país o en el exterior.
           </p>
         </div>
 
-        <!-- CTAs Principales con Reducción de Fricción -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-secondary text-white font-label-lg text-label-lg shadow-[0_8px_25px_rgba(234,88,12,0.45)] hover:bg-secondary-container hover:text-white transition-all transform hover:-translate-y-0.5 font-bold shimmer-sweep" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
+        <!-- CTAs Principales con Ergonomía Móvil -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 sm:pt-2">
+          <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-secondary text-white text-sm sm:text-base font-bold shadow-[0_8px_25px_rgba(234,88,12,0.45)] hover:bg-secondary-container hover:text-white transition-all font-bold shimmer-sweep glow-btn text-center" href="#cotizacion-gratis" onclick="selectQuoteTab('propietario')">
             <span class="material-symbols-outlined text-[20px]">request_quote</span>
-            <span>Cotizar Administración de mi Inmueble</span>
+            <span>Cotizar Administración</span>
           </a>
-          <a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md text-white font-label-lg text-label-lg border border-white/30 hover:bg-white/20 transition-all shadow-md font-semibold" href="https://wa.me/18294554783?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20para%20mi%20apartamento%20en%20Santo%20Domingo" rel="noopener" target="_blank">
+          <a class="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-4 rounded-xl bg-white/10 backdrop-blur-md text-white text-sm sm:text-base border border-white/25 hover:bg-white/20 transition-all shadow-md font-semibold text-center" href="https://wa.me/18294554783?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20para%20mi%20apartamento%20en%20Santo%20Domingo" rel="noopener" target="_blank">
             <span class="material-symbols-outlined text-[20px] text-green-400">chat</span>
-            <span>Hablar directo por WhatsApp</span>
+            <span>Hablar por WhatsApp</span>
           </a>
         </div>
 
-        <!-- 4 Badges de Confianza Fiduciaria en Glassmorphism -->
-        <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
-            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">check_circle</span>
-            <div class="flex flex-col">
-              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Garantía Cero Riesgo</span>
-              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">Si no cobras, no cobramos</span>
+        <!-- 4 Garantías Clave en Grid 2x2 Móvil (Limpio, simétrico, sin colisión con botones flotantes) -->
+        <div class="pt-2 sm:pt-4 grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+          <div class="flex items-center gap-2 p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-amber-400 text-[20px] sm:text-[22px] shrink-0">check_circle</span>
+            <div class="flex flex-col min-w-0">
+              <span class="text-[10.5px] sm:text-[11px] text-white font-bold uppercase leading-tight truncate">Garantía Cero Riesgo</span>
+              <span class="text-[9.5px] sm:text-[11px] text-slate-300 leading-tight mt-0.5 truncate sm:whitespace-normal">Si no cobras, no cobramos</span>
             </div>
           </div>
 
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
-            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">payments</span>
-            <div class="flex flex-col">
-              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Dispersión ACH / Wire</span>
-              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">En tu banco RD o EE.UU.</span>
+          <div class="flex items-center gap-2 p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-amber-400 text-[20px] sm:text-[22px] shrink-0">payments</span>
+            <div class="flex flex-col min-w-0">
+              <span class="text-[10.5px] sm:text-[11px] text-white font-bold uppercase leading-tight truncate">Dispersión ACH / Wire</span>
+              <span class="text-[9.5px] sm:text-[11px] text-slate-300 leading-tight mt-0.5 truncate sm:whitespace-normal">En tu banco RD o EE.UU.</span>
             </div>
           </div>
 
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
-            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">home_repair_service</span>
-            <div class="flex flex-col">
-              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Técnicos 24/7</span>
-              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">Precios pactados y fotos</span>
+          <div class="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-amber-400 text-[20px] sm:text-[22px] shrink-0">home_repair_service</span>
+            <div class="flex flex-col min-w-0">
+              <span class="text-[10.5px] sm:text-[11px] text-white font-bold uppercase leading-tight truncate">Técnicos 24/7</span>
+              <span class="text-[9.5px] sm:text-[11px] text-slate-300 leading-tight mt-0.5 truncate sm:whitespace-normal">Precios pactados y fotos</span>
             </div>
           </div>
 
-          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
-            <span class="material-symbols-outlined text-secondary-fixed text-[22px] shrink-0">gavel</span>
-            <div class="flex flex-col">
-              <span class="font-label-caps text-[11px] text-white font-bold uppercase leading-tight">Defensa Legal</span>
-              <span class="text-[11px] text-slate-300 leading-tight mt-0.5">Voz en asambleas torre</span>
+          <div class="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+            <span class="material-symbols-outlined text-amber-400 text-[20px] sm:text-[22px] shrink-0">gavel</span>
+            <div class="flex flex-col min-w-0">
+              <span class="text-[10.5px] sm:text-[11px] text-white font-bold uppercase leading-tight truncate">Defensa Legal</span>
+              <span class="text-[9.5px] sm:text-[11px] text-slate-300 leading-tight mt-0.5 truncate sm:whitespace-normal">Voz en asambleas torre</span>
             </div>
           </div>
         </div>
@@ -379,7 +503,7 @@
             <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
           </div>
           <div class="flex flex-col text-left">
-            <span class="text-[11px] font-bold text-secondary-fixed uppercase tracking-wider">Gestión Activa en Vivo</span>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Gestión Activa en Vivo</span>
             <span class="text-xs text-slate-200">Torre Residencial &bull; Santo Domingo, D.N.</span>
           </div>
         </div>
@@ -392,7 +516,7 @@
   <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-container-lowest to-transparent pointer-events-none z-10"></div>
 </section>
 
-    <!-- TELEMETRÍA EN VIVO Y KPIs DE CONFIANZA FIDUCIARIA -->
+    <!-- RESULTADOS COMPROBADOS & MÉTRICAS EN VIVO -->
     <section class="relative w-full py-10 bg-surface-container-lowest border-y border-outline-variant/30 overflow-hidden">
       <div class="max-w-[1280px] mx-auto px-4 sm:px-margin">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
@@ -434,21 +558,21 @@
 <!-- NUEVA SECCIÓN DE DOLOR VS. PAZ MENTAL ("La Realidad de Rentar en Santo Domingo") -->
 <section class="w-full py-space-2xl bg-surface-container-low reveal-init" id="realidad-rentar">
 <div class="max-w-[1280px] mx-auto px-4 sm:px-margin flex flex-col gap-space-xl">
-<div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-2">
+<div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-2">
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
-              La Realidad Inmobiliaria en RD
+              Claridad Inmobiliaria
             </span>
 <h2 class="font-headline-xl text-2xl sm:text-headline-xl text-primary font-bold">
-              ¿Cuánto te está costando realmente administrar por tu cuenta?
+              Tu propiedad debe darte libertad, no un segundo trabajo.
             </h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-              Comprar un apartamento para renta debe ser una fuente de libertad, no un segundo trabajo desgastante cargado de emergencias y fricciones.
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+              Comparativa real entre resolver averías y cobros por tu cuenta vs. delegarlo con profesionales.
             </p>
 </div>
 <!-- COMPARATIVA LADO A LADO -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-stretch">
 <!-- Lado Rojo: Gestionar por cuenta propia / corredor informal -->
-<div class="rounded-2xl bg-surface-container-lowest border-2 border-red-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden luxury-card reveal-init">
+<div class="rounded-2xl bg-surface-container-lowest border-2 border-red-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden luxury-glass-card scroll-reveal-item">
 <div class="absolute top-0 left-0 right-0 h-2 bg-red-400"></div>
 <div class="flex flex-col gap-space-md">
 <div class="flex items-center justify-between pb-4 border-b border-surface-container">
@@ -465,15 +589,15 @@
 <ul class="flex flex-col gap-4 text-body-sm text-gray-700">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">warning</span>
-<span class=""><strong>Cobros atrasados y excusas interminables:</strong> Inseguridad constante para pagar la hipoteca o contar con tus dividendos el día previsto.</span>
+<span class=""><strong>Cobros atrasados y excusas interminables:</strong> Tener que pedir el dinero con pena cada mes y no saber cuándo podrás pagar tus compromisos.</span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">phone_callback</span>
-<span class=""><strong>Llamadas urgentes a deshoras:</strong> Inquilinos llamándote de madrugada o fines de semana por una gotera o el compresor del aire.</span>
+<span class=""><strong>Llamadas urgentes a deshoras:</strong> Mensajes a las 11 PM por goteras, cerraduras o el aire acondicionado en tu tiempo de descanso.</span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">money_off</span>
-<span class=""><strong>Cotizaciones infladas de técnicos:</strong> Plomeros o electricistas ocasionales que cobran tarifas abusivas y dejan trabajos a medias.</span>
+<span class=""><strong>Cotizaciones infladas de técnicos:</strong> Pagar cotizaciones infladas a técnicos desconocidos que dejan arreglos mal hechos.</span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-red-500 text-[20px] shrink-0 mt-0.5">domain_disabled</span>
@@ -490,7 +614,7 @@
 </div>
 </div>
 <!-- Lado Azul/Verde: Con Wise Services Property Management -->
-<div class="rounded-2xl bg-surface-container-lowest border-2 border-secondary/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden bg-gradient-to-b from-white to-surface-container-lowest">
+<div class="rounded-2xl bg-surface-container-lowest border-2 border-secondary/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden luxury-glass-card scroll-reveal-item">
 <div class="absolute top-0 left-0 right-0 h-2 bg-secondary"></div>
 <div class="flex flex-col gap-space-md">
 <div class="flex items-center justify-between pb-4 border-b border-surface-container">
@@ -520,7 +644,7 @@
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class=""><strong class="text-primary">Cuota condominal siempre al día:</strong> Pagamos el mantenimiento de la torre y representamos fiduciariamente tus intereses con voz en asambleas.</span>
+<span class=""><strong class="text-primary">Cuota condominal siempre al día:</strong> Pagamos el mantenimiento de la torre y representamos formalmente tus intereses con voz y voto en asambleas.</span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-green-600 text-[20px] shrink-0 mt-0.5">check_circle</span>
@@ -554,7 +678,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
 <!-- Step 1 -->
-<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative hover:shadow-xl transition-all group">
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative luxury-glass-card scroll-reveal-item group">
 <div class="w-14 h-14 rounded-2xl bg-primary text-secondary-fixed flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
                 01
               </div>
@@ -570,14 +694,14 @@
 </ul>
 </div>
 <!-- Step 2 -->
-<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative hover:shadow-xl transition-all group">
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative luxury-glass-card scroll-reveal-item group">
 <div class="w-14 h-14 rounded-2xl bg-secondary text-white flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
                 02
               </div>
 <div class="flex flex-col gap-2">
 <h3 class="font-headline-md text-headline-md text-primary font-bold">Cobro &amp; Dispersión Automática</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Recaudamos la renta cada mes con rigurosidad fiduciaria. Descontamos las cuotas de torre acordadas y transferimos tus fondos netos directamente a tu banco nacional o internacional.
+                  Recaudamos la renta cada mes con puntualidad garantizada. Descontamos las cuotas de torre acordadas y transferimos tus fondos netos directamente a tu banco nacional o internacional.
                 </p>
 </div>
 <ul class="text-xs text-on-surface flex flex-col gap-1.5 pt-2 border-t border-surface-container text-gray-600">
@@ -586,7 +710,7 @@
 </ul>
 </div>
 <!-- Step 3 -->
-<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative hover:shadow-xl transition-all group">
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-md flex flex-col gap-space-md relative luxury-glass-card scroll-reveal-item group">
 <div class="w-14 h-14 rounded-2xl bg-primary text-secondary-fixed flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
                 03
               </div>
@@ -618,61 +742,56 @@
 <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
 <div class="lg:col-span-7 flex flex-col gap-space-md">
-<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-secondary-fixed text-primary font-label-caps text-label-caps uppercase tracking-wider font-bold">
-<span class="material-symbols-outlined text-[16px]">handshake</span>
-                  Honorarios Transparentes
-                </div>
 <h2 class="font-headline-xl text-2xl sm:text-headline-xl font-bold text-on-primary">
-                  El "Pacto de Rendimiento Wise"
+                  Propuesta Clara y a la Medida de tu Inmueble
                 </h2>
 <p class="font-body-md text-surface-container-high leading-relaxed">
-                  Alineamos nuestros incentivos con los tuyos: si tú no cobras tu renta, nosotros no devengamos honorarios. Sin letras pequeñas, sin sobrecargos en reparaciones ni cobros ocultos por mantenimiento de cuenta.
+                  Cada propiedad es única. Realizamos un levantamiento técnico inicial de tu unidad o edificio para evaluar su estado físico, ubicación y potencial de renta antes de presentarte un plan formal con cotización exacta.
                 </p>
-<!-- 3 Pilares del Pacto -->
+<!-- 3 Pilares del Compromiso -->
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
 <div class="p-4 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col gap-1">
-<span class="material-symbols-outlined text-secondary-fixed text-[24px]">price_check</span>
-<span class="font-headline-sm text-sm font-bold text-white">Tarifa Transparente</span>
-<p class="text-xs text-surface-container-high">Porcentaje fijo mensual deduciendo únicamente sobre renta efectivamente recaudada.</p>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">assignment_turned_in</span>
+<span class="font-headline-sm text-sm font-bold text-white">Levantamiento In Situ</span>
+<p class="text-xs text-surface-container-high">Inspección presencial de inventario, equipos y estado de conservación.</p>
 </div>
 <div class="p-4 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col gap-1">
-<span class="material-symbols-outlined text-secondary-fixed text-[24px]">block</span>
-<span class="font-headline-sm text-sm font-bold text-white">Cero Cuota si Vacante</span>
-<p class="text-xs text-surface-container-high">No cobramos cuotas mensuales de administración si la propiedad está vacía.</p>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">handshake</span>
+<span class="font-headline-sm text-sm font-bold text-white">Alineados a Resultados</span>
+<p class="text-xs text-surface-container-high">Si la propiedad está vacía o el inquilino no paga, no devengamos honorarios.</p>
 </div>
 <div class="p-4 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col gap-1">
-<span class="material-symbols-outlined text-secondary-fixed text-[24px]">receipt</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">receipt_long</span>
 <span class="font-headline-sm text-sm font-bold text-white">Cuentas Claras</span>
-<p class="text-xs text-surface-container-high">Facturas originales de cada servicio o repuesto con autorización previa del dueño.</p>
+<p class="text-xs text-surface-container-high">Facturas comprobables de cada mantenimiento con autorización previa del dueño.</p>
 </div>
 </div>
 </div>
-<!-- Recuadro Comparativo Tarifa -->
+<!-- Recuadro Levantamiento Técnico -->
 <div class="lg:col-span-5 bg-surface-container-lowest text-primary p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col gap-space-md border border-white/20">
 <div class="flex items-center justify-between pb-3 border-b border-surface-container">
 <div>
-<span class="font-label-caps text-xs text-secondary uppercase font-bold tracking-wider">Plan Integral para Propietarios</span>
-<h3 class="font-headline-md text-xl font-extrabold text-primary">Wise Care Inversionista</h3>
+<span class="font-label-caps text-xs text-secondary uppercase font-bold tracking-wider">Evaluación Presencial Inicial</span>
+<h3 class="font-headline-md text-xl font-extrabold text-primary">Levantamiento & Diagnóstico</h3>
 </div>
 <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold">
-<span class="material-symbols-outlined text-[22px]">check</span>
+<span class="material-symbols-outlined text-[22px]">real_estate_agent</span>
 </span>
 </div>
-<div class="flex items-baseline gap-2">
-<span class="text-3xl sm:text-4xl font-extrabold text-primary">10%</span>
-<span class="text-xs text-on-surface-variant font-medium">del canon de renta mensual</span>
+<div class="flex flex-col gap-1">
+<span class="text-2xl sm:text-3xl font-extrabold text-primary">Plan a tu Medida</span>
+<span class="text-xs text-on-surface-variant font-medium">Cotización exacta tras la auditoría técnica de la unidad o torre</span>
 </div>
-<p class="text-xs text-on-surface-variant -mt-2">Sin costos de registro mensual ni tarifas de apertura de cuenta.</p>
+<p class="text-xs text-on-surface-variant">Sin compromisos ni costos ocultos. Te entregamos un informe detallado con el canon sugerido de mercado.</p>
 <ul class="flex flex-col gap-2.5 text-xs text-on-surface">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Cobro de alquiler y depósito a cuenta bancaria</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Gestión de pagos de mantenimiento y CAASD</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Línea directa para emergencias de inquilinos 24/7</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Inspecciones periódicas con fotos de control</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Representación fiduciaria en asambleas</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Inspección física completa de la propiedad</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Análisis de rentabilidad y canon de mercado en zona</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Depuración y selección estricta de inquilinos</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">done</span> Gestión integral de cobros y mantenimiento 24/7</li>
 </ul>
 <a class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:bg-secondary-container transition-all" href="#cotizacion-gratis">
-<span class="">Solicitar Auditoría de mi Inmueble</span>
-<span class="material-symbols-outlined text-[18px]">send</span>
+<span class="">Agendar Levantamiento de mi Inmueble</span>
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
 </a>
 </div>
 </div>
@@ -959,9 +1078,9 @@
               </div>
 
               <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
-                <span class="text-[11px] text-surface-variant uppercase tracking-wider font-semibold">Honorario Wise (10%)</span>
-                <span class="text-2xl font-extrabold text-secondary-fixed mt-1" id="calc-fee-monthly">US$ 150 <span class="text-xs font-normal text-white">/mes</span></span>
-                <span class="text-[10px] text-surface-container-high mt-0.5">Solo si el inquilino paga</span>
+                <span class="text-[11px] text-surface-variant uppercase tracking-wider font-semibold">Gestión & Respaldo</span>
+                <span class="text-2xl font-extrabold text-secondary-fixed mt-1">100% Manos Libres</span>
+                <span class="text-[10px] text-surface-container-high mt-0.5">Cotización exacta según unidad</span>
               </div>
 
               <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
@@ -992,7 +1111,7 @@
         </div>
 
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
-<!-- Columna Lateral Fiduciaria & Confianza -->
+<!-- Columna de Asesoría Directa -->
 <div class="lg:col-span-4 flex flex-col gap-space-md">
 <div class="inline-flex items-center gap-1.5 self-start px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/25 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
 <span class="material-symbols-outlined text-[16px]">request_quote</span>
@@ -1002,9 +1121,9 @@
 Calcula la gestión de tu propiedad o condominio en Santo Domingo
 </h2>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-Selecciona tu perfil y completa el formulario correspondiente. Nuestro equipo fiduciario y legal analizará los datos de tu inmueble para enviarte una propuesta formal y personalizada en menos de 24 horas laborables.
+Selecciona tu perfil y completa el formulario correspondiente. Nuestro equipo legal y de administración analizará los datos de tu inmueble para enviarte una propuesta formal y personalizada en menos de 24 horas laborables.
 </p>
-<!-- Tarjeta de Confianza / Respaldo Fiduciario -->
+<!-- Tarjeta de Confianza / Respaldo y Seguridad -->
 <div class="p-6 rounded-2xl bg-primary text-on-primary flex flex-col gap-space-sm shadow-xl border border-white/10 relative overflow-hidden">
 <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
 <div class="flex items-center gap-2 text-secondary-fixed">
@@ -1012,7 +1131,7 @@ Selecciona tu perfil y completa el formulario correspondiente. Nuestro equipo fi
 <span class="font-label-lg text-label-lg font-bold">Garantía de Confidencialidad &amp; Respaldo</span>
 </div>
 <p class="text-xs text-surface-container-high leading-relaxed">
-Tus datos patrimoniales y condominales se custodian bajo estricto sigilo fiduciario conforme a la Ley 5038 y normas de protección de datos en República Dominicana.
+Tus datos patrimoniales y condominales se custodian bajo estricto estricta confidencialidad conforme a la Ley 5038 y normas de protección de datos en República Dominicana.
 </p>
 <div class="pt-4 flex flex-col gap-2.5 text-xs border-t border-white/10 text-surface-variant">
 <a class="flex items-center gap-2 text-secondary-fixed hover:text-white transition-colors" href="https://wa.me/18294554783" rel="noopener noreferrer" target="_blank">
@@ -1159,7 +1278,7 @@ Ley 5038
 </label>
 <label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface-container cursor-pointer transition-colors">
 <input class="w-4 h-4 rounded text-secondary accent-secondary" name="servicios-prop" type="checkbox" value="Voz en asamblea">
-<span class="text-on-surface">Representación y defensa fiduciaria en asambleas</span>
+<span class="text-on-surface">Representación y representación y asistencia en asambleas</span>
 </label>
 </div>
 </div>
@@ -1326,15 +1445,15 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 <span class="material-symbols-outlined text-[32px]">smartphone</span>
 </div>
 <div class="flex flex-col">
-<span class="font-label-caps text-secondary-fixed uppercase tracking-wider text-xs font-bold">Portal Fiduciario 24/7</span>
+<span class="font-label-caps text-secondary-fixed uppercase tracking-wider text-xs font-bold">Portal de Clientes 24/7</span>
 <h3 class="font-headline-lg text-xl sm:text-2xl font-bold text-on-primary">Plataforma "Mi Condominio"</h3>
 <p class="font-body-sm text-xs sm:text-sm text-surface-variant">Acceso digital a tus estados de cuenta, transferencias, facturas y actas sin llamadas ni esperas.</p>
 </div>
 </div>
 <div class="flex items-center gap-3 shrink-0 flex-wrap sm:flex-nowrap">
-<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold hover:bg-surface-variant transition-colors shadow-md" href="#">
+<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold hover:bg-surface-variant transition-colors shadow-md" href="http://localhost:5173" target="_blank" rel="noopener noreferrer">
 <span class="material-symbols-outlined text-[18px] text-secondary">login</span>
-<span class="">Ingresar al Portal</span>
+<span class="">Ingresar al Portal ↗</span>
 </a>
 <a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-secondary text-white font-label-lg text-label-lg font-bold hover:bg-secondary-container transition-colors shadow-md" href="https://wa.me/18294554783" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">chat</span>
@@ -1347,16 +1466,20 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 </div>
 <!-- Scripts de interactividad -->
 </main>
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<!-- BOTÓN FLOTANTE WHATSAPP DE ALTO IMPACTO -->
-<div class="fixed bottom-6 right-6 z-50 flex items-center">
-<a class="flex items-center gap-2 px-4 py-3 rounded-full bg-primary-container text-on-primary shadow-[0_12px_28px_rgba(15,39,68,0.35)] hover:bg-primary transition-all border border-secondary/40 group transform hover:scale-105" href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20me%20gustar%C3%ADa%20asesor%C3%ADa%20para%20administrar%20mi%20apartamento" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[24px] text-green-400">chat</span>
-<div class="flex flex-col text-left">
-<span class="text-[10px] text-secondary-fixed leading-none uppercase font-bold">Atención Inversionistas</span>
-<span class="font-label-md text-xs sm:text-sm leading-tight font-bold">WhatsApp Directo</span>
-</div>
-</a>
+<!-- BURBUJA FLOTANTE WHATSAPP -->
+<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group flex items-center">
+  <!-- Tooltip on hover -->
+  <div class="mr-3 px-3 py-1.5 rounded-xl bg-primary text-white text-xs font-semibold shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all pointer-events-none translate-x-2 group-hover:translate-x-0 hidden sm:block whitespace-nowrap">
+    ¿Conversamos por WhatsApp?
+  </div>
+  <!-- Circular Bubble -->
+  <a aria-label="Hablar por WhatsApp" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(37,211,102,0.45)] hover:bg-[#20bd5a] hover:scale-110 active:scale-95 transition-all duration-300" href="https://wa.me/18294554783?text=Hola%20Wise%20Services,%20me%20gustar%C3%ADa%20asesor%C3%ADa%20para%20administrar%20mi%20apartamento%20o%20edificio" rel="noopener noreferrer" target="_blank">
+    <!-- Pulse ring -->
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-35 pointer-events-none"></span>
+    <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.115.548 4.102 1.509 5.833l-1.609 5.875 6.027-1.581c1.674.912 3.585 1.433 5.617 1.433 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+    </svg>
+  </a>
 </div>
 <!-- FOOTER -->
 <footer class="w-full bg-primary text-on-primary pt-space-2xl pb-space-xl border-t border-white/5">
@@ -1366,7 +1489,7 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 <div class="flex flex-col gap-space-md">
 <div class="flex items-center gap-space-md"><img alt="Wise Services RD" class="h-9 sm:h-10 w-auto object-contain" src="assets/images/logo-footer.png"></div>
 <p class="font-body-sm text-xs text-on-primary-container leading-relaxed">
-            Gestión fiduciaria de alquileres residenciales y administración legal de condominios en Santo Domingo. Cuidamos tu patrimonio inmobiliario mientras disfrutas tus ingresos, residas en el país o en el extranjero.
+            Administración integral de alquileres residenciales y administración legal de condominios en Santo Domingo. Cuidamos tu patrimonio inmobiliario mientras disfrutas tus ingresos, residas en el país o en el extranjero.
           </p>
 <div class="flex items-center gap-2 pt-1">
 <a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed hover:bg-secondary hover:text-white transition-colors" href="https://wa.me/18294554783" target="_blank">
@@ -1394,7 +1517,7 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 </div>
 <!-- Servicios -->
 <div class="flex flex-col gap-space-md">
-<h4 class="font-headline-sm text-sm font-bold text-on-primary uppercase tracking-wider text-secondary-fixed">Servicios Fiduciarios</h4>
+<h4 class="font-headline-sm text-sm font-bold text-on-primary uppercase tracking-wider text-secondary-fixed">Servicios Principales</h4>
 <ul class="flex flex-col gap-2 font-body-sm text-xs text-on-primary-container">
 <li class=""><span class="hover:text-on-primary transition-colors">Property Management Larga Duración</span></li>
 <li class=""><span class="hover:text-on-primary transition-colors">Cobro Mensual y Dispersión Int'l</span></li>
@@ -1436,7 +1559,7 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 <div class="flex items-center gap-6">
 <a class="hover:text-on-primary transition-colors" href="#">Términos de Servicio</a>
 <a class="hover:text-on-primary transition-colors" href="#">Política de Privacidad</a>
-<a class="hover:text-on-primary transition-colors" href="#">Gestión Fiduciaria</a>
+<a class="hover:text-on-primary transition-colors" href="#">Administración Integral</a>
 </div>
 </div>
 </div>
@@ -1752,6 +1875,79 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
         window.addEventListener('touchstart', resumePlay, { once: true });
       });
     }
+  });
+</script>
+
+
+
+<script>
+  // HIGH-END COMMERCIAL MOTION ENGINE
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Lenis Smooth Scroll
+    if (typeof Lenis !== 'undefined') {
+      const lenis = new Lenis({
+        lerp: 0.08,
+        smoothWheel: true,
+        syncTouch: false
+      });
+
+      // Synchronize Lenis with GSAP ScrollTrigger if available
+      if (typeof ScrollTrigger !== 'undefined') {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((t) => lenis.raf(t * 1000));
+        gsap.ticker.lagSmoothing(0);
+      }
+
+      // Smooth progress bar update on scroll
+      const prog = document.getElementById('progressBar');
+      lenis.on('scroll', (e) => {
+        if (prog) {
+          const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+          const currentScroll = window.scrollY;
+          const pct = Math.min(Math.max(currentScroll / totalScroll, 0), 1);
+          prog.style.transform = `scaleX(${pct})`;
+        }
+      });
+
+      // Smooth anchor click jumps
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+          const id = this.getAttribute('href');
+          if (id && id.length > 1) {
+            const target = document.querySelector(id);
+            if (target) {
+              e.preventDefault();
+              lenis.scrollTo(target, { offset: -85, duration: 1.2 });
+            }
+          }
+        });
+      });
+    }
+
+    // 2. Interactive Spotlight Cursor Follow on Cards
+    const glassCards = document.querySelectorAll('.luxury-glass-card, .luxury-card');
+    glassCards.forEach(c => {
+      c.addEventListener('mousemove', (e) => {
+        const r = c.getBoundingClientRect();
+        c.style.setProperty('--mouse-x', `${e.clientX - r.left}px`);
+        c.style.setProperty('--mouse-y', `${e.clientY - r.top}px`);
+      });
+    });
+
+    // 3. Staggered Entrance Reveal with IntersectionObserver
+    const revealItems = document.querySelectorAll('.scroll-reveal-item, .pro-reveal, section > div');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in-view');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(item => {
+      item.classList.add('scroll-reveal-item');
+      observer.observe(item);
+    });
   });
 </script>
 
