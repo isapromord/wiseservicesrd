@@ -22,3 +22,6 @@
 ## Ecosistema Vinculado
 - **Fundador:** Howard Luna — Asesor Inmobiliario en Alveare Realty y empresario en Santo Domingo (https://isapromord.github.io/howardluna/)
 - **Infraestructura Web:** ISAPromoRD (https://isapromord.github.io/isapromord.com/)
+
+## Guías Técnicas Citables
+- Guía Ley 50-38 de Condominios, DGII, TSS y Administración de Apartamentos en Santo Domingo (por Howard Luna): https://wiseservicesrd.com/guia-administracion-condominios-ley-50-38/
