@@ -1,14 +1,34 @@
-<!DOCTYPE html><html lang="es"><head>
+<!DOCTYPE html><html lang="es-DO"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="web_standard" name="shell-type">
-<meta name="description" content="Administración integral de apartamentos y condominios en Santo Domingo (Piantini, Naco, Bella Vista). Inquilinos depurados, cobro puntual y mantenimiento 24/7.">
-<meta name="keywords" content="administracion de propiedades santo domingo, property management republica dominicana, cobro de alquileres santo domingo, administracion condominios piantini naco bella vista">
-<meta property="og:title" content="Wise Services RD | Property Management en Santo Domingo">
-<meta property="og:description" content="Tu renta puntual cada mes en tu cuenta, sin llamadas ni atrasos. Gestión integral de apartamentos y condominios en Santo Domingo.">
+<title>Wise Services RD | Administración de Condominios y Apartamentos</title>
+<meta name="description" content="Administración integral de apartamentos y condominios en Santo Domingo (Piantini, Naco, Bella Vista). Inquilinos depurados, Ley 50-38 y mantenimiento 24/7.">
+<meta name="keywords" content="administracion de propiedades santo domingo, administracion de condominios santo domingo, property management republica dominicana, cobro de alquileres santo domingo, administracion de apartamentos piantini naco bella vista, ley 50-38 condominios rd">
+<meta name="author" content="Wise Services RD — Fundado por Howard Luna">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://wiseservicesrd.com/">
+
+<!-- Metatags Geográficos para SEO Local y Google Maps en Santo Domingo, RD -->
+<meta name="geo.region" content="DO-01">
+<meta name="geo.placename" content="Polígono Central, Santo Domingo, República Dominicana">
+<meta name="geo.position" content="18.4718;-69.9389">
+<meta name="ICBM" content="18.4718, -69.9389">
+
+<!-- OpenGraph & Twitter Cards -->
+<meta property="og:title" content="Wise Services RD | Administración de Condominios y Apartamentos en Santo Domingo">
+<meta property="og:description" content="Tu renta puntual cada mes en tu cuenta, sin llamadas ni atrasos. Gestión integral de apartamentos y condominios bajo Ley 50-38 en Santo Domingo.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://isapromord.github.io/wiseservicesrd/">
-<meta property="og:image" content="https://isapromord.github.io/wiseservicesrd/assets/images/hero-video-poster.jpg">
+<meta property="og:site_name" content="Wise Services RD">
+<meta property="og:locale" content="es_DO">
+<meta property="og:url" content="https://wiseservicesrd.com/">
+<meta property="og:image" content="https://wiseservicesrd.com/assets/images/hero-video-poster.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wise Services RD | Property Management en Santo Domingo">
+<meta name="twitter:description" content="Administración integral de apartamentos y condominios en Santo Domingo. Inquilinos depurados, cobro puntual y cumplimiento Ley 50-38.">
+<meta name="twitter:image" content="https://wiseservicesrd.com/assets/images/hero-video-poster.jpg">
 
 <!-- Lenis Smooth Scroll -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.css">
@@ -17,20 +37,161 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-<!-- Schema.org JSON-LD -->
+<!-- Schema.org JSON-LD: Grafo de Entidades + OfferCatalog + FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "Wise Services RD",
-  "description": "Administración integral de inmuebles residenciales, condominios y property management en Santo Domingo, República Dominicana.",
-  "url": "https://isapromord.github.io/wiseservicesrd/",
-  "telephone": "+1-829-455-4783",
-  "areaServed": ["Distrito Nacional", "Piantini", "Naco", "Bella Vista", "Evaristo Morales", "Anacaona"]
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://wiseservicesrd.com/#organization",
+      "name": "Wise Services RD",
+      "alternateName": ["Wise Services Property Management", "Wise Services República Dominicana"],
+      "description": "Empresa especializada en administración integral de apartamentos en alquiler de larga duración y gestión operativa de condominios y torres residenciales bajo la Ley 50-38 en Santo Domingo, República Dominicana.",
+      "url": "https://wiseservicesrd.com/",
+      "image": "https://wiseservicesrd.com/assets/images/hero-video-poster.jpg",
+      "logo": "https://wiseservicesrd.com/assets/images/logo-footer.png",
+      "telephone": "+1-829-455-4783",
+      "email": "info@wiseservicesrd.com",
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://isapromord.github.io/howardluna/#person",
+        "name": "Howard Luna",
+        "url": "https://isapromord.github.io/howardluna/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Polígono Central (Piantini / Churchill)",
+        "addressLocality": "Santo Domingo",
+        "addressRegion": "Distrito Nacional",
+        "addressCountry": "DO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.4718,
+        "longitude": -69.9389
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Santo Domingo" },
+        { "@type": "AdministrativeArea", "name": "Distrito Nacional" },
+        { "@type": "Place", "name": "Piantini" },
+        { "@type": "Place", "name": "Naco" },
+        { "@type": "Place", "name": "Bella Vista" },
+        { "@type": "Place", "name": "Evaristo Morales" },
+        { "@type": "Place", "name": "La Esperilla" },
+        { "@type": "Place", "name": "Avenida Anacaona" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:30",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Administración de Propiedades y Condominios en Santo Domingo",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Administración de Apartamentos en Alquiler de Larga Duración",
+              "description": "Depuración rigurosa de inquilinos, contratos blindados, cobro mensual puntual, dispersión nacional e internacional y reportes fotográficos periódicos."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Administración Integral de Condominios y Torres (Ley 50-38)",
+              "description": "Gestión financiera transparente, reducción de morosidad, nómina y cumplimiento DGII/TSS, representación en asambleas y supervisión de personal."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mantenimiento Preventivo y Correctivo 24/7",
+              "description": "Supervisión técnica de plantas eléctricas full, bombas de agua, gas común, ascensores y emergencias residenciales con evidencia fotográfica."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Portal Digital de Clientes Mi Condominio 24/7",
+              "description": "Acceso digital transparente a estados de cuenta, transferencias, facturas, actas de asamblea e inspecciones fotográficas."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wiseservicesrd.com/#website",
+      "url": "https://wiseservicesrd.com/",
+      "name": "Wise Services RD",
+      "publisher": { "@id": "https://wiseservicesrd.com/#organization" },
+      "inLanguage": "es-DO"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://wiseservicesrd.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye la administración de apartamentos de larga duración de Wise Services RD en Santo Domingo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluye auditoría inicial del inmueble, depuración rigurosa de inquilinos, contratos de alquiler blindados, gestión de cobro mensual y dispersión puntual a cuentas locales o internacionales, mantenimiento preventivo y correctivo 24/7 con reportes fotográficos y representación ante la junta de condominio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Wise Services RD administra condominios y torres completas bajo la Ley 50-38 en República Dominicana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Gestionamos torres residenciales y condominios en Santo Domingo cumpliendo formalmente con la Ley 50-38 de Condominios, incluyendo control de morosidad, contabilidad transparente, registro y cumplimiento ante la DGII (RNC) y la TSS para empleados del edificio, así como supervisión de planta eléctrica full, gas común y ascensores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué sectores de Santo Domingo opera Wise Services RD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Operamos principalmente en el Polígono Central y zonas residenciales de alta demanda en el Distrito Nacional: Piantini, Naco, Bella Vista, Evaristo Morales, La Esperilla, Serrallés y Avenida Anacaona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo supervisar mi apartamento o condominio si vivo en el extranjero (EE.UU. o Europa)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Nuestro servicio está diseñado para propietarios locales y de la diáspora o inversionistas extranjeros. Recibes reportes fotográficos de inspecciones, transferencias puntuales de renta y acceso digital 24/7 al portal de clientes Mi Condominio con estados de cuenta, facturas y actas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo solicitar una propuesta o auditoría para mi apartamento o junta de vecinos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes solicitar una propuesta personalizada en menos de 24 horas escribiendo por WhatsApp al +1 (829) 455-4783, enviando un correo a info@wiseservicesrd.com o completando el formulario en wiseservicesrd.com."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
-
-<title>Wise Services RD | Property Management &amp; Administración de Condominios en Santo Domingo</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
@@ -388,7 +549,7 @@
     <!-- CTAs Header Adaptativos -->
     <div class="flex items-center gap-2 sm:gap-3 shrink-0">
       <!-- Botón Portal Clientes -->
-      <a class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-primary font-bold text-xs sm:text-sm border border-slate-200 transition-all shrink-0 shadow-sm" href="http://localhost:5173" target="_blank" rel="noopener noreferrer" title="Ir al Portal de Clientes">
+      <a class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-primary font-bold text-xs sm:text-sm border border-slate-200 transition-all shrink-0 shadow-sm" href="https://wa.me/18294554783?text=Hola%20Wise%20Services%20RD%2C%20quiero%20solicitar%20acceso%20al%20Portal%20Mi%20Condominio" target="_blank" rel="noopener noreferrer" title="Solicitar acceso al Portal de Clientes">
         <span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
         <span>Portal</span>
       </a>
@@ -1429,9 +1590,9 @@ Cumplimiento formal Ley 5038 de Condominios y normas DGII/TSS.
 </div>
 </div>
 <div class="flex items-center gap-3 shrink-0 flex-wrap sm:flex-nowrap">
-<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold hover:bg-surface-variant transition-colors shadow-md" href="http://localhost:5173" target="_blank" rel="noopener noreferrer">
+<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold hover:bg-surface-variant transition-colors shadow-md" href="https://wa.me/18294554783?text=Hola%20Wise%20Services%20RD%2C%20quiero%20solicitar%20acceso%20al%20Portal%20Mi%20Condominio" target="_blank" rel="noopener noreferrer">
 <span class="material-symbols-outlined text-[18px] text-secondary">login</span>
-<span class="">Ingresar al Portal ↗</span>
+<span class="">Solicitar Acceso al Portal ↗</span>
 </a>
 <a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-secondary text-white font-label-lg text-label-lg font-bold hover:bg-secondary-container transition-colors shadow-md" href="https://wa.me/18294554783" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">chat</span>
